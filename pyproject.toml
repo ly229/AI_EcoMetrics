@@ -1,0 +1,5 @@
+[project]
+name = "ai-ecometrics"
+version = "0.1.0"
+description = "A lightweight research workspace for the AI EcoMetrics project."
+requires-python = ">=3.13"

@@ -1,0 +1,195 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{array}
+\graphicspath{{./images/}}
+
+\title{From Clerks to Code: How Technology Impacted Labor in Asset Management?}
+
+\author{
+  \begin{minipage}{0.92\linewidth}
+  \centering
+  \normalsize
+  Lu Yu\textsuperscript{1,*}, Xiang Li\textsuperscript{2,*} \\
+  \textsuperscript{1}Department of Economics, Georgetown University \\
+  \textsuperscript{2}Pittsburgh Supercomputing Center, Carnegie Mellon University \\
+  \textsuperscript{*}Equal contribution; correspondence: \texttt{xl7@andrew.cmu.edu}
+  \end{minipage}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Financial firms have gone through three major technological waves: computerization in the 1980s and 1990s, the rise of indexing and passive investing in the 2000s and 2010s, and the AI and automation wave from roughly 2015 to the present. This project studies how much labor is required to manage capital across those waves by tracking a simple productivity measure: assets under management per employee. Using a small panel of representative firms, we compare changes in AUM per employee, revenue per employee, and operating expense intensity over time. The goal is not to identify causal effects, but to document stylized facts about how technology changes the scale of asset management work.
+\end{abstract}
+
+\section{Introduction}
+Asset management has changed dramatically over the last four decades. In the earlier computerization era, firms invested in information technology, electronic trading, and back-office automation. Later, the spread of index funds and exchange-traded funds made it possible to run much larger pools of capital with comparatively fewer workers. In the most recent AI era, firms increasingly use machine learning, data platforms, and automation to support research, distribution, compliance, and operations.
+
+This project asks a simple question: how much labor is needed to manage capital as financial technology evolves? The central metric is assets under management per employee, which we treat as a proxy for labor productivity in asset management. A rising ratio suggests that each worker is supporting more capital, whether because of automation, standardization, scale economies, or changes in product mix.
+
+\section{Core Idea}
+The empirical design is intentionally simple and transparent. We construct firm-year observations for a small set of large asset managers and measure how their labor productivity evolves across three broad technology phases:
+
+\begin{itemize}
+  \item Computerization, approximately 1985--2000
+  \item Indexing, approximately 2000--2015
+  \item AI and automation, approximately 2015--present
+\end{itemize}
+
+The core hypothesis is that each successive wave of technology increases the amount of capital that can be managed per employee. The project does not claim a clean causal estimate. Instead, it documents a stylized relationship between technology adoption and labor efficiency.
+
+\section{Firms}
+We keep the sample small but representative by focusing on four large firms with different business models and long operating histories:
+
+\begin{table}[h]
+  \centering
+  \caption{Representative firms in the sample}
+  \begin{tabular}{>{\raggedright\arraybackslash}p{0.24\linewidth} >{\raggedright\arraybackslash}p{0.30\linewidth} >{\raggedright\arraybackslash}p{0.36\linewidth}}
+    \toprule
+    Firm & Model & Why it is useful \\
+    \midrule
+    J.P. Morgan & Scale, AI, ETFs, broad financial services & Captures large-platform adoption of technology \\
+    Vanguard Group & Pure passive pioneer & Highlights low-labor passive management model \\
+    Fidelity Investments & Active management and retail orientation & Provides contrast to passive-heavy firms \\
+    State Street Global Advisors & ETF and institutional focus & Useful for passive and institutional scale comparisons \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+This selection covers active versus passive management, different adoption speeds, and enough time depth to observe broad trends.
+
+\section{Periodization}
+We divide the sample into three historical phases:
+
+\subsection{Computerization, 1985--2000}
+This period covers the rise of IT infrastructure, electronic trading, and back-office automation. The expected pattern is gradual productivity improvement, especially through the reduction of clerical work and manual processing.
+
+\subsection{Indexing, 2000--2015}
+This period covers the expansion of index funds and ETFs. The expected pattern is a sharper rise in AUM per employee because passive products can scale with fewer operational and research resources.
+
+\subsection{AI and Automation, 2015--present}
+This period covers AI, big data, and quant platforms. The expected pattern is continued growth in productivity, though the slope may flatten as firms shift labor composition rather than simply reduce headcount.
+
+\section{Key Metrics}
+For each firm-year observation, we keep the measurement set minimal.
+
+\subsection{Main metric}
+The main outcome is
+\[
+\text{AUM per Employee} = \frac{\text{Assets Under Management}}{\text{Employees}}.
+\]
+We interpret this as labor productivity in asset management.
+
+\subsection{Supporting metrics}
+We also track:
+\begin{itemize}
+  \item Revenue per employee
+  \item Operating expense divided by AUM
+  \item Passive share of AUM, when available or approximable
+\end{itemize}
+
+These secondary measures help distinguish scale effects from margin effects and provide a broader view of organizational efficiency.
+
+\section{Data Pipeline}
+The project is designed to be feasible with a mix of public data and light manual collection.
+
+\subsection{Firm financials}
+The core firm-level financial variables can come from Compustat via WRDS, including employees, revenue, operating expenses, and firm identifiers such as GVKEY. This works especially well for public firms such as J.P. Morgan and State Street Corporation.
+
+\subsection{AUM data}
+The most important variable is AUM. For public firms, this can often be collected from annual reports and 10-K filings. For firms with less standardized disclosure, such as Vanguard and Fidelity, annual reports, fact sheets, and company websites can be used to build a panel manually.
+
+\begin{table}[h]
+  \centering
+  \caption{Target dataset structure}
+  \begin{tabular}{lllllll}
+    \toprule
+    Firm & Year & AUM & Employees & Revenue & AUM/Employee & Phase \\
+    \midrule
+    J.P. Morgan & 1995 & --- & --- & --- & --- & Computerization \\
+    Vanguard & 2005 & --- & --- & --- & --- & Indexing \\
+    Fidelity & 2018 & --- & --- & --- & --- & AI / Automation \\
+    State Street & 2022 & --- & --- & --- & --- & AI / Automation \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Passive exposure}
+If data access allows, passive share of AUM can be estimated from Morningstar Direct or CRSP Mutual Fund data. A rough ETF share of total AUM is still useful for a first pass.
+
+\subsection{AI exposure}
+AI exposure is treated lightly. A simple approach is to count mentions of ``AI'' or ``machine learning'' in annual reports, or to include a post-2015 dummy variable as a coarse indicator of the AI era.
+
+\subsection{Final dataset}
+The final panel can be assembled in pandas by merging firm financials with manual AUM data and then computing productivity ratios:
+\begin{verbatim}
+df["aum_per_employee"] = df["AUM"] / df["EMP"]
+\end{verbatim}
+
+\section{Output}
+The paper will focus on three main figures.
+
+\subsection{Figure 1}
+Time series of AUM per employee by firm. This is the main figure and should carry the main narrative.
+
+\subsection{Figure 2}
+Growth rate of AUM versus growth rate of employees. This figure helps show whether capital scale is rising faster than labor input.
+
+\subsection{Figure 3}
+Passive share versus labor productivity. This optional figure can help connect product mix to efficiency.
+
+\begin{figure}[h]
+  \centering
+  \fbox{\rule[-.5cm]{0cm}{4.5cm}\rule{0.92\linewidth}{0cm}}
+  \caption{Placeholder for AUM per employee time series by firm.}
+  \label{fig:aum_employee}
+\end{figure}
+
+\section{Narrative Structure}
+The discussion section will follow the three historical phases.
+
+\subsection{Computerization}
+The expected finding is slow but visible improvement in productivity, mostly through the reduction of clerical labor and improved operating systems.
+
+\subsection{Indexing}
+The expected finding is a sharper increase in AUM per employee. Passive funds require fewer workers per dollar of capital because they are simpler to run at scale.
+
+\subsection{AI and Automation}
+The expected finding is continued growth in productivity, possibly with some flattening if firms shift toward higher-skilled labor rather than pure headcount reduction.
+
+\section{Why This Design Works}
+The design works because it stays close to what the data can support.
+
+\begin{itemize}
+  \item It does not require a strong causal identification strategy.
+  \item It focuses on stylized facts that are easy to communicate.
+  \item It directly links technology, scalability, and labor efficiency.
+\end{itemize}
+
+\section{Expected Findings}
+The likely pattern is:
+
+\begin{itemize}
+  \item Computerization: gradual productivity improvement
+  \item Indexing: large jump in AUM per employee
+  \item AI era: continued growth, potentially at a slower pace
+\end{itemize}
+
+An additional comparison between passive-heavy and active-heavy firms may show a divergence similar to Vanguard versus Fidelity.
+
+\section{Conclusion}
+This project provides a simple empirical framework for studying how technology changes labor demand in asset management. By using AUM per employee as the central metric and organizing the sample into broad technological eras, the paper can present a clear and intuitive account of how firms scale capital with fewer workers over time.
+
+\bibliographystyle{unsrt}
+
+\end{document}
