@@ -25,3 +25,5 @@ Supporting measures include:
 Optional extensions add passive AUM share and a simple AI-exposure proxy from filings or era dummies. The goal is not causal identification but a clear set of stylized facts that show how labor productivity changed across the three technology eras.
 
 I also created a WRDS data-collection skill to make the extraction workflow reusable and reproducible. The skill is saved in `.codex/skills/wrds-data-collection`.
+
+For the first Compustat pull, use `scripts/fetch_spgi_compustat.py` after WRDS login is configured; it writes the CSV to `Data/spgi_compustat_annual.csv` by default.
