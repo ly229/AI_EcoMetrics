@@ -1,0 +1,281 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{array}
+\graphicspath{{./images/}}
+
+\title{From Clerks to Agentic-AI: How will Technology Transform Us?}
+
+\author{
+  \begin{minipage}{0.92\linewidth}
+  \centering
+  \normalsize
+  Lu Yu\textsuperscript{1,*}, Xiang Li\textsuperscript{2,*} \\
+  \textsuperscript{1}Department of Economics, Georgetown University \\
+  \textsuperscript{2}Pittsburgh Supercomputing Center, Carnegie Mellon University \\
+  \textsuperscript{*}Equal contribution; correspondence: \texttt{xl7@andrew.cmu.edu}
+  \end{minipage}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Artificial intelligence is beginning to reshape financial markets in the same way that computers and electronic systems reshaped them in earlier decades. This paper studies a focused version of that broader shift: the rise of AI trading agents and their effect on market participants, market structure, and labor demand inside finance. The central claim is not that AI will eliminate finance, but that it will reorganize who can do high-quality research, monitoring, execution, and risk management. We use the historical computer revolution in the 1980s and 1990s as a benchmark, then compare it with the current AI wave. The expected outcome is a more polarized industry: large institutions preserve structural advantages, small teams become more capable, and middle-layer roles face the greatest pressure.
+\end{abstract}
+
+\section{Introduction}
+Finance has always been shaped by productivity shocks. In the 1970s and 1980s, semiconductors, personal computers, spreadsheets, Bloomberg terminals, and Reuters systems transformed the way market participants processed information. In the current era, the question is whether AI trading agents will create a similar shift, but at a faster pace and with broader access.
+
+The key issue is not just whether AI can help traders make better decisions. The deeper question is how AI changes the structure of finance: who has access to sophisticated tools, how teams are organized, which jobs disappear, and which roles become more valuable. In that sense, AI is likely to affect both market efficiency and labor allocation.
+
+This paper frames the problem around a historical comparison. The computer revolution increased speed, expanded information processing, and gave institutions a structural advantage over manual trading. AI may do something similar, but with a different distributional outcome. A small team with AI tools can now conduct research, monitor markets, manage risk, and execute trades in ways that previously required a much larger staff.
+
+\section{Historical Parallel: The Computer Revolution}
+The rise of computers in the 1980s offers the closest historical analogy.
+
+\subsection{What changed then}
+The old market structure depended heavily on phone calls, floor trading, paper records, and manual reconciliation. Over time, that world was replaced by systems that could:
+\begin{itemize}
+  \item analyze cross-asset relationships
+  \item model rates, FX, and commodities together
+  \item support systematic and macro strategies
+  \item automate routine execution and reporting
+\end{itemize}
+
+The effects were visible in three dimensions:
+\begin{itemize}
+  \item Speed: minutes became seconds, which helped create programmatic trading
+  \item Information processing: more data could be digested and acted on
+  \item Institutional advantage: better hardware and algorithms widened the gap between professionals and retail
+\end{itemize}
+
+This was not simply a technology upgrade. It was a restructuring of market organization. The industry moved from fragmented and manual toward systematic and interconnected.
+
+\subsection{Why the analogy matters}
+The AI era may produce a similar structural shift. The relevant comparison is not just "computer vs AI" but "manual finance vs machine-augmented finance." The question is how much labor is needed when the research, monitoring, and execution stack becomes partially agentic.
+
+\section{Historical Evidence Base}
+To ground the historical analogy, we use two compact evidence sets. The first is a transition case from the asset-management side of finance: Vanguard, which began as a very lean organization and scaled rapidly as passive investing became viable. The second is a manual-era benchmark from large pre-electronic firms whose staffing and organizational complexity illustrate what finance looked like before automation became dominant.
+
+\subsection{Vanguard as a lean transition case}
+Vanguard is useful because it sits close to the boundary between manual-era finance and the more standardized, scalable asset-management model that later became common. Its early staffing numbers and AUM growth provide a simple benchmark for how much capital could be managed by a relatively small team.
+
+\begin{table}[h]
+  \centering
+  \caption{Vanguard evidence table}
+  \begin{tabular}{p{0.24\linewidth} p{0.10\linewidth} p{0.24\linewidth} p{0.22\linewidth} p{0.16\linewidth}}
+    \toprule
+    Source & Year & Staffing evidence & Capital / scale evidence & Coding use \\
+    \midrule
+    Vanguard history & 1975 & 28 initial employees, described as ``crew members'' & Started with \$11 million in assets & Early lean baseline \\
+    TEHS Quarterly & 1980 & 200 employees & \$2.4 billion in total net assets and 17 mutual funds & Early growth benchmark \\
+    University of Utah paper & 1970s & 59 staff, split between executive/admin and fund accounting & Post-1974 startup phase & Labor composition snapshot \\
+    Bogleheads/company history & 1976 & Small team for first index fund & \$11 million raised for the first index fund & Lean index-fund origin case \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Pre-electronic firm benchmarks}
+Large brokerage and investment banking firms help illustrate the staffing intensity of the manual era. These firms were large, multi-division organizations with significant sales, underwriting, research, and client-service labor before modern automation fully reshaped workflows.
+
+\begin{table}[h]
+  \centering
+  \caption{Pre-electronic firm evidence table}
+  \begin{tabular}{p{0.18\linewidth} p{0.10\linewidth} p{0.28\linewidth} p{0.22\linewidth} p{0.16\linewidth}}
+    \toprule
+    Firm & Year & Staffing evidence & Capital / scale evidence & Coding use \\
+    \midrule
+    Merrill Lynch & 1985 & Workforce of 42,500 after 2,300 cuts & Large retail and institutional brokerage footprint & Late manual-era scale benchmark \\
+    Morgan Stanley & 1970--1980 & Staff grew from below 200 to 1,700 & Paid-in capital rose from \$7.5 million to \$118 million & Manual-to-electronic transition benchmark \\
+    Smith Barney & 1938 & 730 staff after merger & Consolidated underwriting and brokerage platform & Merger-driven manual-era baseline \\
+    Smith Barney & 1970s & 2,250 sales representatives by 1987 & Equity capital of \$413 million & Late sales-heavy staffing benchmark \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Together, these tables support a simple narrative: pre-electronic finance required substantial human labor, while the later asset-management model could scale much more capital with much less staffing. That historical shift is the backdrop for the current AI wave.
+
+\section{AI Trading Agents and Market Stratification}
+AI trading agents are already changing how market participants work.
+
+\subsection{Retail divergence}
+Retail investors are likely to split into two groups:
+\begin{itemize}
+  \item AI-enabled investors who use models for research, screening, execution, and monitoring
+  \item Non-AI users who rely on social media, intuition, and slower manual processes
+\end{itemize}
+
+The first group can increasingly approach small-institution capability. The second group will likely fall behind as AI-assisted workflows become a baseline expectation rather than an edge.
+
+\subsection{Institutional response}
+Institutions will not disappear, but they will be forced to adapt. Their main advantage will remain in infrastructure, data, capital, compliance, and execution quality. However, their internal workflow will increasingly resemble an AI-supervised production system rather than a purely human one.
+
+\section{Democratization of Capability}
+One of the most important changes is the falling cost of sophisticated analysis.
+
+Before AI, serious market research often required expensive subscriptions, specialized terminals, or dedicated analyst teams. Now, a much smaller user can:
+\begin{itemize}
+  \item query markets in natural language
+  \item summarize large volumes of information
+  \item monitor multiple asset classes at once
+  \item automate risk checks and alerts
+  \item generate code or trading logic more quickly
+\end{itemize}
+
+This does not mean all users become equal. It does mean that the cost of reaching professional-grade capability is falling sharply.
+
+\section{The Rise of Mini Hedge Funds}
+One likely outcome is the emergence of very small hedge fund-like teams.
+
+\subsection{What they look like}
+These groups may have only one to three people, but they can combine:
+\begin{itemize}
+  \item domain expertise
+  \item AI research support
+  \item automated monitoring
+  \item systematic execution
+  \item lightweight compliance and affiliation structures
+\end{itemize}
+
+This model is especially relevant for younger professionals and small institutions that cannot compete on staffing, but can compete on speed and focus.
+
+\subsection{What remains hard}
+Large institutions still retain a few advantages:
+\begin{itemize}
+  \item high-frequency infrastructure
+  \item proprietary data
+  \item large-scale research budgets
+  \item direct access to liquidity and counterparties
+\end{itemize}
+
+So AI compresses the gap, but does not erase it.
+
+\section{Impact on Institutions}
+The impact of AI will differ across firm size.
+
+\subsection{Small and mid-sized firms}
+These firms face the most pressure. If they cannot match AI adoption, they lose the historical advantage of being nimble. Their options are:
+\begin{itemize}
+  \item invest heavily in data and systems
+  \item specialize in a narrow niche
+  \item shift toward advisory or service roles
+\end{itemize}
+
+The middle ground becomes harder to defend.
+
+\subsection{Large institutions}
+Large institutions will continue to dominate, but their edge will shift. They will push toward faster execution and more automated decision pipelines. The competitive frontier will move from milliseconds toward microseconds and beyond in the most infrastructure-intensive segments.
+
+\section{Workforce Transformation}
+AI will reshape finance jobs as much as it reshapes markets.
+
+\subsection{Most exposed roles}
+The most exposed tasks are:
+\begin{itemize}
+  \item data entry
+  \item routine reporting
+  \item basic modeling
+  \item compliance checks
+  \item repetitive monitoring
+\end{itemize}
+
+\subsection{Changing role of traders}
+The trader role does not disappear, but it changes. More of the job shifts from direct execution to:
+\begin{itemize}
+  \item supervising AI systems
+  \item designing strategy frameworks
+  \item validating outputs
+  \item interpreting regime shifts
+\end{itemize}
+
+A single senior PM may now supervise work that used to require a much larger team.
+
+\section{Who Will Not Be Replaced?}
+AI raises efficiency, but it does not fully replace judgment.
+
+\subsection{More durable human advantages}
+The people most likely to remain valuable are those with:
+\begin{itemize}
+  \item strong frameworks and methodology
+  \item strategic depth
+  \item experience under stress
+  \item intuition for regime change
+  \item the ability to reason under uncertainty
+\end{itemize}
+
+\subsection{Where AI still struggles}
+AI is strong at pattern recognition in familiar environments, but weaker at:
+\begin{itemize}
+  \item structural breaks
+  \item geopolitical shocks
+  \item black swan events
+  \item game-theoretic ambiguity
+\end{itemize}
+
+That is why AI can improve execution and analysis without eliminating the need for human judgment.
+
+\section{A Bifurcated Future}
+The industry is likely to polarize.
+
+\begin{table}[h]
+  \centering
+  \caption{Likely labor market split under AI adoption}
+  \begin{tabular}{>{\raggedright\arraybackslash}p{0.25\linewidth} >{\raggedright\arraybackslash}p{0.65\linewidth}}
+    \toprule
+    Segment & Expected outcome \\
+    \midrule
+    Top tier & Strategy plus AI integration, with stronger leverage over tools and data \\
+    Middle layer & Highest risk of compression, especially routine analytical roles \\
+    Bottom tier & Low-skill tasks are most easily automated or standardized \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+This is the central labor-market implication: AI increases capability, but not evenly.
+
+\section{Efficiency Versus Fairness}
+Technological progress typically maximizes efficiency first. Fairness comes later, if it comes at all.
+
+The regulatory question is not whether to stop AI, but how to shape its adoption. Useful goals include:
+\begin{itemize}
+  \item preventing extreme distortions
+  \item keeping access broad enough to avoid monopoly tools
+  \item reducing exploitative loopholes
+  \item preserving market integrity
+\end{itemize}
+
+Absolute fairness is unrealistic. The more realistic goal is to keep the market functional and competitive.
+
+\section{Historical Reminder}
+Previous technological shifts brought major risks:
+\begin{itemize}
+  \item the 1987 crash
+  \item the LTCM collapse in 1998
+  \item the quant crisis during 2007--2008
+\end{itemize}
+
+These episodes show that innovation can raise fragility as well as efficiency. The lesson is not to halt innovation, but to manage risk while innovation proceeds.
+
+\section{Conclusion}
+AI trading agents are not just another software upgrade. They are likely to:
+\begin{itemize}
+  \item restructure market participants
+  \item redistribute analytical capability
+  \item change the cost of trading expertise
+  \item compress some job categories while elevating others
+\end{itemize}
+
+The likely future is not a market without humans. It is a market where humans who use AI will outperform humans who do not, and where the most important value lies in combining judgment with machine speed. That is the main transformation this paper is designed to capture.
+
+\bibliographystyle{unsrt}
+
+\end{document}
