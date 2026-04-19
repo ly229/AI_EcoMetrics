@@ -1,0 +1,12 @@
+Firm FE regression: log(revenue per employee)
+
+N = 320
+R-squared = 0.884
+
+C(era, Treatment(reference='Pre-computerization'))[T.Computerization]: 1.4070 (0.0659)***
+C(era, Treatment(reference='Pre-computerization'))[T.Indexing]: 2.0543 (0.0636)***
+C(era, Treatment(reference='Pre-computerization'))[T.AI]: 2.3688 (0.0692)***
+C(firm_group)[T.Bank of America / Merrill Lynch family]: -0.0120 (0.0696)
+C(firm_group)[T.JPMorgan family]: 0.2377 (0.0664)***
+C(firm_group)[T.S&P Global]: -0.4608 (0.0579)***
+C(firm_group)[T.State Street family]: -0.3037 (0.0606)***

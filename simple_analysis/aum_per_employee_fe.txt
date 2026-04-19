@@ -1,0 +1,11 @@
+Firm FE regression: log(AUM per employee)
+
+N = 196
+R-squared = 0.642
+
+C(era, Treatment(reference='Pre-computerization'))[T.Computerization]: 1.3638 (0.2728)***
+C(era, Treatment(reference='Pre-computerization'))[T.Indexing]: 2.4197 (0.1690)***
+C(era, Treatment(reference='Pre-computerization'))[T.AI]: 3.3944 (0.2524)***
+C(firm_group)[T.Bank of America / Merrill Lynch family]: -3.2151 (0.3737)***
+C(firm_group)[T.JPMorgan family]: -1.4912 (0.2611)***
+C(firm_group)[T.State Street family]: 0.3479 (0.1510)**
