@@ -1,0 +1,7 @@
+interface:
+  display_name: "Academic Author Summary"
+  short_description: "Summarize authors into paper folders"
+  default_prompt: "Use $sum-academic-author to summarize this academic author into an author folder with an overview file and a most-selected-works subfolder."
+
+policy:
+  allow_implicit_invocation: true
