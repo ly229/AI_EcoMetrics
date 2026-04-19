@@ -56,7 +56,13 @@ The PDF is generated from `src/AI_ecometrics.tex`.
 Example local build:
 
 ```bash
-./tectonic --outdir build src/AI_ecometrics.tex
+./build_tex.sh
 ```
 
 If you use `uv`, the project root also includes a minimal `pyproject.toml` so `uv run` works as a lightweight environment entry point.
+
+Environment knobs:
+
+- `TECTONIC_ONLY_CACHED=0` to allow network fetching when you explicitly want it
+- `TECTONIC_BUNDLE=/path/to/bundle` to point at a specific Tectonic resource bundle
+- `TECTONIC_BIN=/path/to/tectonic` to override the binary selection

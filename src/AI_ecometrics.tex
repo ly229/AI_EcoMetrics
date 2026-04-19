@@ -1,36 +1,51 @@
 \documentclass{article}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage{hyperref}
 \usepackage{url}
 \usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{amsfonts}
-\usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{array}
 \graphicspath{{./images/}}
-
-\title{From Clerks to Agentic-AI: How will Technology Transform Us?}
-
-\author{
-  \begin{minipage}{0.92\linewidth}
-  \centering
-  \normalsize
-  Lu Yu\textsuperscript{1,*}, Xiang Li\textsuperscript{2,*} \\
-  \textsuperscript{1}Department of Economics, Georgetown University \\
-  \textsuperscript{2}Pittsburgh Supercomputing Center, Carnegie Mellon University \\
-  \textsuperscript{*}Equal contribution; correspondence: \texttt{xl7@andrew.cmu.edu}
-  \end{minipage}
-}
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+  {-3.5ex \@plus -1ex \@minus -.2ex}%
+  {2.3ex \@plus.2ex}%
+  {\normalfont\normalsize\centering\MakeUppercase}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\MakeUppercase}}
+\makeatother
+\renewcommand{\emph}[1]{#1}
+\newcommand{\affmark}[1]{\raisebox{0.6ex}{#1}}
 
 \begin{document}
-\maketitle
+\thispagestyle{empty}
+\noindent\rule{\linewidth}{1pt}
+\begin{center}
+\MakeUppercase{From Clerks to Agentic-AI}\\
+\MakeUppercase{How will Technology Change Labor Market in Finance?}
+\end{center}
+\noindent\rule{\linewidth}{1pt}
 
-\begin{abstract}
+\vspace{0.8em}
+\begin{center}
+Lu Yu\affmark{1} and Xiang Li\affmark{2} \\
+\affmark{1} Department of Economics, Georgetown University \\
+\affmark{2} Pittsburgh Supercomputing Center, Carnegie Mellon University \\
+Equal contribution; correspondence: ly229@georgetown.edu
+\end{center}
+
+\vspace{0.8em}
+\noindent\rule{\linewidth}{0.4pt}
+\vspace{0.4em}
+\noindent \MakeUppercase{Abstract} \\
 Artificial intelligence is beginning to reshape financial markets in the same way that computers and electronic systems reshaped them in earlier decades. This paper studies a focused version of that broader shift: the rise of AI trading agents and their effect on market participants, market structure, and labor demand inside finance. The central claim is not that AI will eliminate finance, but that it will reorganize who can do high-quality research, monitoring, execution, and risk management. We use the historical computer revolution in the 1980s and 1990s as a benchmark, then compare it with the current AI wave. The expected outcome is a more polarized industry: large institutions preserve structural advantages, small teams become more capable, and middle-layer roles face the greatest pressure.
-\end{abstract}
+\vspace{0.4em}
+\noindent\rule{\linewidth}{0.4pt}
+\vspace{1.2em}
 
 \section{Introduction}
 Finance has always been shaped by productivity shocks. In the 1970s and 1980s, semiconductors, personal computers, spreadsheets, Bloomberg terminals, and Reuters systems transformed the way market participants processed information. In the current era, the question is whether AI trading agents will create a similar shift, but at a faster pace and with broader access.
@@ -76,10 +91,10 @@ Vanguard is useful because it sits close to the boundary between manual-era fina
     \toprule
     Source & Year & Staffing evidence & Capital / scale evidence & Coding use \\
     \midrule
-    Vanguard history & 1975 & 28 initial employees, described as ``crew members'' & Started with \$11 million in assets & Early lean baseline \\
-    TEHS Quarterly & 1980 & 200 employees & \$2.4 billion in total net assets and 17 mutual funds & Early growth benchmark \\
+    Vanguard history & 1975 & 28 initial employees, described as crew members & Started with 11 million USD in assets & Early lean baseline \\
+    TEHS Quarterly & 1980 & 200 employees & 2.4 billion USD in total net assets and 17 mutual funds & Early growth benchmark \\
     University of Utah paper & 1970s & 59 staff, split between executive/admin and fund accounting & Post-1974 startup phase & Labor composition snapshot \\
-    Bogleheads/company history & 1976 & Small team for first index fund & \$11 million raised for the first index fund & Lean index-fund origin case \\
+    Bogleheads/company history & 1976 & Small team for first index fund & 11 million USD raised for the first index fund & Lean index-fund origin case \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -95,9 +110,9 @@ Large brokerage and investment banking firms help illustrate the staffing intens
     Firm & Year & Staffing evidence & Capital / scale evidence & Coding use \\
     \midrule
     Merrill Lynch & 1985 & Workforce of 42,500 after 2,300 cuts & Large retail and institutional brokerage footprint & Late manual-era scale benchmark \\
-    Morgan Stanley & 1970--1980 & Staff grew from below 200 to 1,700 & Paid-in capital rose from \$7.5 million to \$118 million & Manual-to-electronic transition benchmark \\
+    Morgan Stanley & 1970--1980 & Staff grew from below 200 to 1,700 & Paid-in capital rose from 7.5 million USD to 118 million USD & Manual-to-electronic transition benchmark \\
     Smith Barney & 1938 & 730 staff after merger & Consolidated underwriting and brokerage platform & Merger-driven manual-era baseline \\
-    Smith Barney & 1970s & 2,250 sales representatives by 1987 & Equity capital of \$413 million & Late sales-heavy staffing benchmark \\
+    Smith Barney & 1970s & 2,250 sales representatives by 1987 & Equity capital of 413 million USD & Late sales-heavy staffing benchmark \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -276,6 +291,129 @@ AI trading agents are not just another software upgrade. They are likely to:
 
 The likely future is not a market without humans. It is a market where humans who use AI will outperform humans who do not, and where the most important value lies in combining judgment with machine speed. That is the main transformation this paper is designed to capture.
 
-\bibliographystyle{unsrt}
+
+\begin{thebibliography}{99}
+
+\bibitem{acemoglu2026automationpolarization}
+Acemoglu, D., and J. Loebbing. 2026.
+\newblock ``Automation and Polarization.''
+\newblock \emph{Journal of Political Economy} 134(3): 1017--1072.
+
+\bibitem{acemoglu2026aiaggregation}
+Acemoglu, D., T. Lin, A. Ozdaglar, and J. Siderius. 2026.
+\newblock ``How AI Aggregation Affects Knowledge.''
+
+\bibitem{acemoglu2026aicognition}
+Acemoglu, D., D. Kong, and A. Ozdaglar. 2026.
+\newblock ``AI, Human Cognition and Knowledge Collapse.''
+
+\bibitem{acemoglu2026proworker}
+Acemoglu, D., D. Autor, and S. Johnson. 2026.
+\newblock ``Building Pro-Worker Artificial Intelligence.''
+\newblock Brookings Institution.
+
+\bibitem{acemoglu2025tasksatwork}
+Acemoglu, D., F. Kong, and P. Restrepo. 2025.
+\newblock ``Tasks at Work: Comparative Advantage, Technology and Labor Demand.''
+\newblock \emph{Handbook of Labor Economics} 6: 1--114.
+
+\bibitem{acemoglu2022tasksautomation}
+Acemoglu, D., and P. Restrepo. 2022.
+\newblock ``Tasks, Automation, and the Rise in U.S. Wage Inequality.''
+
+\bibitem{agrawal2025economics}
+Agrawal, A. K., E. Brynjolfsson, and A. Korinek. 2025.
+\newblock \emph{The Economics of Transformative AI}.
+\newblock University of Chicago Press.
+
+\bibitem{agrawal2025agenda}
+Agrawal, A. K., E. Brynjolfsson, and A. Korinek. 2025.
+\newblock ``A Research Agenda for the Economics of Transformative AI.''
+\newblock NBER Working Paper.
+
+\bibitem{aghion2025resetting}
+Aghion, P., A. Bergeaud, T. Boppart, and J.-F. Brouillette. 2025.
+\newblock \emph{Resetting the Innovation Clock: Endogenous Growth through Technological Turnover}.
+
+\bibitem{aghion2016innovation}
+Aghion, P., U. Akcigit, A. Bergeaud, R. Blundell, and D. H\'emous. 2016.
+\newblock ``Innovation and Top Income Inequality.''
+\newblock \emph{Journal of Political Economy} 124(5): 1473--1504.
+
+\bibitem{autor2026newwork}
+Autor, D., C. Chin, A. Salomons, and B. Seegmiller. 2026.
+\newblock ``What Makes New Work Different from More Work?''
+\newblock Forthcoming in \emph{Annual Review of Economics}.
+
+\bibitem{autor2025expertise}
+Autor, D., and N. Thompson. 2025.
+\newblock ``Expertise.''
+\newblock \emph{Journal of the European Economic Association} 23(4): 1203--1271.
+
+\bibitem{autor2026automationparadox}
+Autor, D., and B. Kausik. 2026.
+\newblock ``Resolving the Automation Paradox: Falling Labor Share, Rising Wages.''
+
+\bibitem{autor2024schumpeter}
+Autor, D. 2024.
+\newblock ``Does automation replace experts or augment expertise? The answer is yes.''
+\newblock 2024 Schumpeter Lecture, European Economic Association.
+
+\bibitem{brynjolfsson2026minimumwages}
+Brynjolfsson, E., J. F. Li, J. Miranda, R. Seamans, and A. J. Wang. 2026.
+\newblock ``Minimum Wages and Rise of the Robots.''
+\newblock NBER Working Paper 34895.
+
+\bibitem{brynjolfsson2025transformative}
+Brynjolfsson, E., A. K. Agrawal, and A. Korinek. 2025.
+\newblock \emph{The Economics of Transformative AI}.
+\newblock University of Chicago Press.
+
+\bibitem{brynjolfsson2025agenda}
+Brynjolfsson, E., A. K. Agrawal, and A. Korinek. 2025.
+\newblock ``A Research Agenda for the Economics of Transformative AI.''
+\newblock NBER Working Paper.
+
+\bibitem{brynjolfsson2024adoption}
+Brynjolfsson, E., K. McElheran, J. F. Li, Z. Kroff, E. Dinlersoz, L. Foster, and N. Zolas. 2024.
+\newblock ``AI adoption in America: Who, what, and where.''
+\newblock \emph{Journal of Economics \& Management Strategy}.
+
+\bibitem{brynjolfsson2023macroeconomics}
+Brynjolfsson, E., and G. Unger. 2023.
+\newblock ``The Macroeconomics of Artificial Intelligence.''
+\newblock IMF.
+
+\bibitem{brynjolfsson2023generative}
+Brynjolfsson, E., D. Li, and L. Raymond. 2023.
+\newblock ``Generative AI at Work.''
+\newblock \emph{The Quarterly Journal of Economics}.
+
+\bibitem{brynjolfsson2022turingtrap}
+Brynjolfsson, E. 2022.
+\newblock ``The Turing Trap: The Promise \& Peril of Human-Like Artificial Intelligence.''
+\newblock \emph{D\ae dalus}.
+
+\bibitem{brynjolfssonmcafee2017businessai}
+Brynjolfsson, E., and A. McAfee. 2017.
+\newblock ``The Business of Artificial Intelligence: What it Can and Cannot Do for Your Organization.''
+\newblock \emph{Harvard Business Review}.
+
+\bibitem{mcafeebrynjolfsson2016humanwork}
+McAfee, A., and E. Brynjolfsson. 2016.
+\newblock ``Human Work in the Robotic Future: Policy for the Age of Automation.''
+\newblock \emph{Foreign Affairs}, July/August 2016.
+
+\bibitem{brynjolfssonmcafee2015horses}
+Brynjolfsson, E., and A. McAfee. 2015.
+\newblock ``Will Humans Go the Way of Horses? Labor in the Second Machine Age.''
+\newblock \emph{Foreign Affairs}, July/August 2015.
+
+\bibitem{brynjolfssonmcafee2014newworldorder}
+Brynjolfsson, E., A. McAfee, and M. Spence. 2014.
+\newblock ``New World Order: Labor, Capital, and Ideas in the Power Law Economy.''
+\newblock \emph{Foreign Affairs}, July/August 2014.
+
+\end{thebibliography}
 
 \end{document}

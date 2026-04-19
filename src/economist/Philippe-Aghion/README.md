@@ -22,3 +22,12 @@ French economist known for work on endogenous growth, innovation, competition, a
 - *Endogenous Growth Theory* with Peter Howitt (1998)
 - "Growth and the Smart State" (2014)
 - "Innovation and Top Income Inequality" (2015)
+
+## Papers
+
+- [Growth-and-the-Smart-State.md](./Growth-and-the-Smart-State.md)
+- [Innovation-and-Top-Income-Inequality.md](./Innovation-and-Top-Income-Inequality.md)
+
+## Citations
+
+- [citations.md](./citations.md)
