@@ -2,3 +2,6 @@
 tectonic
 .venv/
 build/
+.env
+Data/
+data/
