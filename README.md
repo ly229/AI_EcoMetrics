@@ -1,27 +1,62 @@
 # AI_EcoMetrics
 
-This project tells a simple story: as asset management moved through computerization, index investing, and AI-driven automation, the industry became more scalable and required fewer employees per dollar of assets managed.
+This project studies how AI trading agents may transform financial markets, market structure, and finance labor demand. The working paper is [src/AI_ecometrics.tex](src/AI_ecometrics.tex), titled:
 
-The central question is whether technology changed the labor intensity of asset management. The main outcome is `AUM per Employee`, which measures how much capital each worker supports. If this ratio rises over time, it suggests that firms are managing more assets with relatively less labor, or with labor shifted toward higher-value tasks such as oversight, research, compliance, and model governance.
+`From Clerks to Agentic-AI: How will Technology Transform Us?`
 
-The narrative follows three technology waves:
+## Core Idea
 
-1. Computerization reduced routine clerical and back-office work.
-2. Index investing expanded scalable, rules-based portfolio management.
-3. AI and automation may further reduce routine analytical work while increasing the value of specialized judgment and supervision.
+The paper argues that finance has repeatedly been reshaped by productivity shocks. The historical benchmark is the computer revolution of the 1980s and 1990s, when semiconductors, PCs, spreadsheets, Bloomberg terminals, and Reuters systems increased the speed and scale of market analysis.
 
-## Methodology
+The current wave is AI:
 
-The empirical design is intentionally simple and descriptive. It uses a firm-year panel for major asset managers and combines labor counts with assets under management, revenue, and operating expense data. The key metric is computed as:
+1. AI trading agents lower the cost of research, monitoring, execution, and risk management.
+2. Small teams can approach capabilities that previously required larger institutional staffs.
+3. The industry may become more polarized, with strong pressure on middle-layer analytical and operational roles.
 
-`AUM per Employee = Assets Under Management / Employees`
+## Main Themes
 
-Supporting measures include:
+- Historical parallel: manual finance -> computerization -> AI-augmented finance
+- Retail divergence: AI-enabled investors vs non-AI users
+- Institutional response: adaptation through infrastructure, data, and compliance
+- Democratization: lower-cost access to sophisticated market tools
+- Labor impact: routine tasks are the most exposed
+- Structural shift: the market may support "mini hedge funds" and AI-supervised workflows
 
-`Revenue per Employee`
+## Evidence Base
 
-`Operating Expense / AUM`
+The draft uses two compact evidence tables to support the historical analogy:
 
-Optional extensions add passive AUM share and a simple AI-exposure proxy from filings or era dummies. The goal is not causal identification but a clear set of stylized facts that show how labor productivity changed across the three technology eras.
+- [data/Vanguard_Evidence_Table.md](data/Vanguard_Evidence_Table.md)
+- [data/Pre_Electronic_Firm_Evidence_Tables.md](data/Pre_Electronic_Firm_Evidence_Tables.md)
 
-I also created a WRDS data-collection skill to make the extraction workflow reusable and reproducible. The skill is saved in `.codex/skills/wrds-data-collection`.
+These tables document:
+
+- Vanguard as a lean transition case in asset management
+- Merrill Lynch, Morgan Stanley, and Smith Barney as pre-electronic firm benchmarks
+
+## Document Structure
+
+The LaTeX draft is organized into:
+
+1. Abstract and introduction
+2. Historical parallel to the computer revolution
+3. Historical evidence base
+4. AI trading agents and market stratification
+5. Democratization of financial capability
+6. Mini hedge funds and institutional impact
+7. Workforce transformation
+8. Efficiency versus fairness
+9. Historical risk reminders and conclusion
+
+## Build
+
+The PDF is generated from `src/AI_ecometrics.tex`.
+
+Example local build:
+
+```bash
+./tectonic --outdir build src/AI_ecometrics.tex
+```
+
+If you use `uv`, the project root also includes a minimal `pyproject.toml` so `uv run` works as a lightweight environment entry point.
