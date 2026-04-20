@@ -35,6 +35,26 @@ These tables document:
 - Vanguard as a lean transition case in asset management
 - Merrill Lynch, Morgan Stanley, and Smith Barney as pre-electronic firm benchmarks
 
+## Data Collection Skills
+
+The project uses reusable skills for data collection:
+
+- `wrds-data-collection` - collect financial research data from WRDS using Python and SQL pushdown queries
+- `sec-api-10k-filings` - connect to official SEC EDGAR endpoints, fetch 10-K filings, download filing text, and build a manifest for the AI exposure proxy / automation level index
+
+These skills support the panel and text-based exposure workflows used to measure productivity, labor intensity, and how much AI- and automation-related language appears in annual reports and 10-K filings.
+
+## AI Exposure Analysis
+
+The SEC filing pipeline and the resulting panel fixed-effects analysis now live in [AI_exposure_analysis](AI_exposure_analysis/).
+
+Key scripts:
+
+- [run_sec_ai_exposure_pipeline.py](AI_exposure_analysis/scripts/run_sec_ai_exposure_pipeline.py)
+- [fetch_sec_10k_filings.py](AI_exposure_analysis/scripts/fetch_sec_10k_filings.py)
+- [build_ai_exposure_from_filings.py](AI_exposure_analysis/scripts/build_ai_exposure_from_filings.py)
+- [run_ai_exposure_panel_fe.py](AI_exposure_analysis/scripts/run_ai_exposure_panel_fe.py)
+
 ## Document Structure
 
 The LaTeX draft is organized into:
@@ -56,13 +76,7 @@ The PDF is generated from `src/AI_ecometrics.tex`.
 Example local build:
 
 ```bash
-./build_tex.sh
+./tectonic --outdir build src/AI_ecometrics.tex
 ```
 
 If you use `uv`, the project root also includes a minimal `pyproject.toml` so `uv run` works as a lightweight environment entry point.
-
-Environment knobs:
-
-- `TECTONIC_ONLY_CACHED=0` to allow network fetching when you explicitly want it
-- `TECTONIC_BUNDLE=/path/to/bundle` to point at a specific Tectonic resource bundle
-- `TECTONIC_BIN=/path/to/tectonic` to override the binary selection

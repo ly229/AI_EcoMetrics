@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEC API 10-K Filings"
+  short_description: "Fetch SEC 10-K filings and build a text-based exposure manifest"
+  default_prompt: "Use $skill-sec-api-10k-filings to connect to SEC API, query 10-K filings, download filing text, and build a manifest for AI exposure analysis."

@@ -3,3 +3,8 @@ name = "ai-ecometrics"
 version = "0.1.0"
 description = "A lightweight research workspace for the AI EcoMetrics project."
 requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.10.8",
+    "pandas>=3.0.2",
+    "statsmodels>=0.14.6",
+]

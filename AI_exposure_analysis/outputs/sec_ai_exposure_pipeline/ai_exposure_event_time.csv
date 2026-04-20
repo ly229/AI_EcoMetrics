@@ -1,0 +1,6 @@
+ticker,event_year,baseline_mean,pre_event_obs,post_event_obs
+BAC,2015,0.14689388918028765,0,5
+SPGI,2018,0.0,3,5
+JPM,2019,0.06119885953415153,4,5
+STT,2019,0.09233674347764709,4,5
+BK,2025,0.0,4,1
