@@ -1,8 +1,8 @@
-# AI Exposure and Financial Labor Reallocation: Evidence from Official SEC 10-K Filings
+# How will Technology Change Labor Market in Finance?
 
 ## Abstract
 
-This paper studies how agentic AI may affect the financial labor market by constructing a text-based AI exposure proxy from official SEC 10-K filings. Using a small panel of five large financial firms from 2015 to 2025, the analysis measures exposure as a weighted count of direct AI terms and adjacent automation language normalized by filing length. The empirical design combines firm and year fixed effects with the resulting exposure series to examine whether within-firm changes in AI disclosure intensity are associated with changes in revenue per employee, assets under management per employee, and labor expense per employee. The baseline evidence is mixed but informative: higher AI exposure is associated with lower revenue per employee, higher AUM per employee, and no statistically clear effect on labor expense per employee. A descriptive event-study style figure also shows that the exposure series rises at different times across firms, suggesting staggered diffusion rather than a uniform sector-wide shock.
+Artificial intelligence is beginning to reshape financial markets in the same way that computers and electronic systems reshaped them in earlier decades. This paper studies a focused version of that broader shift: the rise of AI trading agents and their effect on market participants, market structure, and labor demand inside finance. The central claim is not that AI will eliminate finance, but that it will reorganize who can do high-quality research, monitoring, execution, and risk management. We use the historical computer revolution in the 1980s and 1990s as a benchmark, then compare it with the current AI wave. The expected outcome is a more polarized industry: large institutions preserve structural advantages, small teams become more capable, and middle-layer roles face the greatest pressure.
 
 ## 1 Introduction
 
@@ -81,7 +81,3 @@ This paper provides an initial working paper on the labor-market implications of
 ## 8 Notes
 
 Figure 1 refers to the coefficient plot of firm and year fixed-effects estimates for AI exposure across outcomes. Figure 2 refers to the event-study style alignment of the exposure series around each firm’s first substantive increase in disclosure intensity. The data source for both figures is official SEC 10-K filings, merged with the finance panel used in the simple analysis.
-
-![Coefficient plot of AI exposure fixed-effects results](AI_exposure_analysis/figures/ai_exposure_fe_coefficients.png)
-
-![Event-study style AI exposure dynamics](AI_exposure_analysis/figures/ai_exposure_event_study.png)
