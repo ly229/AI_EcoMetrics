@@ -1,4 +1,5 @@
-# From Clerks to Agentic-AI: How will Technology Change Labor Market in Finance?
+# From Clerks to Agentic-AI:  
+How will Technology Change Labor Market in Finance?
 
 **Lu Yu**  
 Department of Economics, Georgetown University
@@ -14,9 +15,9 @@ Artificial intelligence is beginning to reshape financial markets in the same wa
 
 ## The Question
 
-The rapid diffusion of agentic AI has created a new question for finance: whether the technology will primarily substitute for labor, augment existing workers, or reorganize the allocation of tasks inside firms. The concern is especially relevant in financial services because the industry combines standardized reporting, large-scale data processing, client service, and judgment-intensive decision-making within the same organizational structure. As a result, even modest changes in AI capability may alter task composition before they show up as visible employment adjustments. The question is therefore not simply whether AI reduces headcount, but which margins of the firm adjust first and which outcomes move in response.
+The rapid diffusion of agentic AI has created a new question for finance: whether the technology will primarily substitute for labor, augment existing workers, or reorganize the allocation of tasks inside firms. The issue matters especially in financial services because the industry combines standardized workflows, information processing, client-facing service, and judgment-intensive decision-making within the same organizational structure. As a result, AI is likely to affect tasks unevenly. Some activities may become cheaper and faster, while others may remain bottlenecked by supervision, trust, interpretation, and responsibility. The central question is therefore not simply whether AI reduces headcount, but which parts of the firm adjust first and what that implies for productivity, scale, and labor demand.
 
-This paper approaches that question with a finance-specific empirical design built around official SEC filing data. Rather than relying only on broad industry narratives or indirect surveys, the analysis extracts 10-K text from the SEC EDGAR system and builds an AI exposure proxy from the language firms use in their disclosures. The resulting series captures the intensity of direct AI terminology and nearby automation language in annual reports, normalized by filing length. The purpose is not to claim clean causality at this stage, but to create a transparent measure of exposure and ask whether it moves with firm-level operating outcomes.
+This paper approaches that question with a finance-specific empirical design that combines historical comparison, firm-level operating outcomes, and a simple measure of AI exposure drawn from corporate disclosures. Rather than treating AI as a purely speculative future shock, the paper studies how its diffusion already appears in the language firms use and whether that diffusion aligns with changes in revenue intensity, scale, and labor cost per worker. The goal is not to claim definitive causality at this stage, but to build a transparent framework for asking how AI reshapes the organization of work inside finance.
 
 ## Historical Parallel: The Computer Revolution
 
@@ -24,19 +25,15 @@ The natural benchmark for the AI wave is the earlier computer revolution. In the
 
 That historical comparison matters because finance has already lived through one major technology shock. The earlier wave increased speed, improved information processing, expanded the use of derivatives, and widened the advantage of institutions that could afford hardware, data, and systems integration. Manual workflows such as paper tickets, phone-based execution, and fragmented recordkeeping gradually gave way to system-driven trading and more interconnected market structure. The current AI wave appears to be pushing on similar margins, but through cognition and workflow automation rather than through computation alone.
 
+The next figure translates that historical comparison into a task-level cost question. It shifts the discussion from old technology infrastructure to the practical choice between human labor, off-shore labor, and AI agents. The point is not that AI is always cheaper, but that the relevant unit of analysis is the full workflow cost, including supervision, risk, and integration.
+
+![Workforce transformation cost comparison](AI_exposure_analysis/figures/workforce_transformation.png)
+
 ## Baseline Evidence from the Earlier Productivity Shift
 
 The earlier `simple_analysis` provides the descriptive bridge from the computer era to the current AI period. That work compares firm-group productivity across four broad eras: pre-computerization, computerization, indexing, and AI. The regression evidence shows that both `revenue_per_employee` and `aum_per_employee` are substantially higher in later eras than in the pre-computerization benchmark, even after controlling for firm-group fixed effects. In the revenue specification, the era coefficients rise from 1.4070 in the computerization period to 2.0543 in the indexing period and 2.3688 in the AI period. In the AUM specification, the coefficients rise from 1.3638 to 2.4197 and then 3.3944.
 
 These magnitudes are not causal estimates, but they show that the financial panel is already moving in the same broad direction as the later SEC-based analysis. They also suggest that long-run productivity growth in finance did not arrive all at once. It accumulated through waves of technological and organizational change.
-
-![Revenue per employee by firm year](../simple_analysis/figures/revenue_per_employee_by_firm_year.png)
-
-The revenue-per-employee figure shows that productivity trends are not flat within firm groups and that large financial intermediaries move on different trajectories. The sustained upward movement is consistent with the regression evidence that later eras are associated with higher revenue intensity than the pre-computerization benchmark. At the same time, the separation between firms suggests that organizational change and business model differences mediate the technology effect.
-
-![Simple finance productivity eras](../simple_analysis/figures/simple_finance_productivity_eras.png)
-
-The era plot summarizes the broad step-up in productivity across pre-computerization, computerization, indexing, and AI. Its main value in this paper is motivational: it shows that the finance panel already contains strong long-run variation before the SEC-based AI exposure proxy is introduced.
 
 ![Simple finance productivity eras real](../simple_analysis/figures/simple_finance_productivity_eras_real.png)
 
@@ -82,7 +79,21 @@ This pattern also helps explain why middle-tier firms may face the most pressure
 
 ## Workforce Transformation
 
-The labor-market implication is that AI will likely reshape finance through tasks before it reshapes it through job titles. Some functions are highly codifiable: data processing, routine reporting, standardized review, first-pass compliance checks, and internal documentation. Those are the areas where AI assistance is most likely to compress labor needs or reduce the demand for junior coordination roles. Other functions depend more heavily on judgment, client trust, negotiation, model oversight, and regime interpretation. Those are more likely to be augmented than replaced.
+AGI labor impacts are hard to model directly, so the most practical starting point is bottom-line thinking. The relevant comparison is not whether AI is "cheap" in the abstract, but whether the fully loaded cost of a human's output exceeds the all-in cost of AI tokens, infrastructure, and oversight. This framing also fits Kulveit's discussion of post-AGI economics, which warns against importing human-economy assumptions too directly into an AI-dominated setting.
+
+| Cost component | U.S. Worker | Off-Shore Worker | AI Agent |
+|---|---|---|---|
+| Direct cost | Salary: $45k/year | Salary: $8k/year (INR 6.7L) | Token cost: $0.03 per call |
+| Indirect cost | Benefits, taxes, office: +35% ($15k) | Benefits, office: +35% ($3k) | Integration, cloud infra: $10k/year |
+| Supervision cost | Manager time, training: 10-15 hours/month | Manager time, quality control: 15-20 hours/month | Prompt tuning, monitoring: 5-10 hours/month |
+| Risk cost | Turnover (50% annual), errors, absenteeism | Higher turnover (60-80%), timezone/cultural issues | Hallucinations, escalation handoff (20-30%) |
+| Best use case | Complex emotional/escalation calls | Routine queries, cost-sensitive operations | High-volume routine triage |
+| **Per-call cost** | **$4.80/call** | **$0.88/call** | **$0.83/call** |
+| **Annual (12.5k calls)** | **$60,000** | **$11,000** | **$10,375** |
+
+The table makes the tradeoff concrete. AI is not costless, but its cost structure is different: more variable on usage, less tied to headcount, and often easier to scale across repetitive work. The key question is whether a task is dominated by judgment and exception handling, or by volume, standardization, and throughput.
+
+The labor-market implication is that AI will likely reshape finance through tasks before it reshapes it through job titles. Functions that are highly codifiable, such as data processing, routine reporting, standardized review, first-pass compliance checks, and internal documentation, are the most likely to face cost compression. By contrast, judgment-heavy work, client trust, negotiation, model oversight, and regime interpretation are more likely to be augmented than replaced.
 
 The event-study style figure supports this incremental view of diffusion. It aligns firms around the first year in which exposure rises above the early baseline by a fixed margin. Bank of America appears earlier, S&P Global accelerates later, JPMorgan and State Street move more gradually, and BNY Mellon crosses the threshold very late in the sample. That timing pattern suggests staggered organizational adoption rather than a single sector-wide break.
 
@@ -114,32 +125,31 @@ This paper provides an initial working framework for studying how agentic AI cha
 
 ## Notes
 
-Figure 1 refers to the coefficient plot of firm and year fixed-effects estimates for AI exposure across outcomes. Figure 2 refers to the event-study style alignment of the exposure series around each firm's first substantive increase in disclosure intensity. The data source for both figures is official SEC 10-K filings, merged with the finance panel used in the earlier `simple_analysis`.
+The coefficient plot summarizes firm and year fixed-effects estimates for AI exposure across outcomes. The event-study style figure aligns the exposure series around each firm's first substantive increase in disclosure intensity. The data source for both figures is official SEC 10-K filings, merged with the finance panel used in the earlier `simple_analysis`.
 
 ## References
 
+- Brynjolfsson, E., A. McAfee, and M. Spence. 2014. "New World Order: Labor, Capital, and Ideas in the Power Law Economy." *Foreign Affairs*, July/August 2014.
+- Brynjolfsson, E., and A. McAfee. 2015. "Will Humans Go the Way of Horses? Labor in the Second Machine Age." *Foreign Affairs*, July/August 2015.
+- Aghion, P., U. Akcigit, A. Bergeaud, R. Blundell, and D. Hemous. 2016. "Innovation and Top Income Inequality." *Journal of Political Economy* 124(5): 1473-1504.
+- McAfee, A., and E. Brynjolfsson. 2016. "Human Work in the Robotic Future: Policy for the Age of Automation." *Foreign Affairs*, July/August 2016.
+- Brynjolfsson, E., and A. McAfee. 2017. "The Business of Artificial Intelligence: What it Can and Cannot Do for Your Organization." *Harvard Business Review*.
+- Brynjolfsson, E. 2022. "The Turing Trap: The Promise & Peril of Human-Like Artificial Intelligence." *Daedalus*.
+- Brynjolfsson, E., and G. Unger. 2023. "The Macroeconomics of Artificial Intelligence." IMF.
+- Brynjolfsson, E., D. Li, and L. Raymond. 2023. "Generative AI at Work." *The Quarterly Journal of Economics*.
+- Brynjolfsson, E., K. McElheran, J. F. Li, Z. Kroff, E. Dinlersoz, L. Foster, and N. Zolas. 2024. "AI adoption in America: Who, what, and where." *Journal of Economics & Management Strategy*.
+- Autor, D. 2024. "Does automation replace experts or augment expertise? The answer is yes." 2024 Schumpeter Lecture, European Economic Association.
+- Acemoglu, D., and P. Restrepo. 2022. "Tasks, Automation, and the Rise in U.S. Wage Inequality."
+- Aghion, P., A. Bergeaud, T. Boppart, and J.-F. Brouillette. 2025. *Resetting the Innovation Clock: Endogenous Growth through Technological Turnover*.
+- Acemoglu, D., F. Kong, and P. Restrepo. 2025. "Tasks at Work: Comparative Advantage, Technology and Labor Demand." *Handbook of Labor Economics* 6: 1-114.
+- Agrawal, A. K., E. Brynjolfsson, and A. Korinek. 2025. *The Economics of Transformative AI*. University of Chicago Press.
+- Agrawal, A. K., E. Brynjolfsson, and A. Korinek. 2025. "A Research Agenda for the Economics of Transformative AI." NBER Working Paper.
+- Autor, D., and N. Thompson. 2025. "Expertise." *Journal of the European Economic Association* 23(4): 1203-1271.
 - Acemoglu, D., and J. Loebbing. 2026. "Automation and Polarization." *Journal of Political Economy* 134(3): 1017-1072.
 - Acemoglu, D., T. Lin, A. Ozdaglar, and J. Siderius. 2026. "How AI Aggregation Affects Knowledge."
 - Acemoglu, D., D. Kong, and A. Ozdaglar. 2026. "AI, Human Cognition and Knowledge Collapse."
 - Acemoglu, D., D. Autor, and S. Johnson. 2026. "Building Pro-Worker Artificial Intelligence." Brookings Institution.
-- Acemoglu, D., F. Kong, and P. Restrepo. 2025. "Tasks at Work: Comparative Advantage, Technology and Labor Demand." *Handbook of Labor Economics* 6: 1-114.
-- Acemoglu, D., and P. Restrepo. 2022. "Tasks, Automation, and the Rise in U.S. Wage Inequality."
-- Agrawal, A. K., E. Brynjolfsson, and A. Korinek. 2025. *The Economics of Transformative AI*. University of Chicago Press.
-- Agrawal, A. K., E. Brynjolfsson, and A. Korinek. 2025. "A Research Agenda for the Economics of Transformative AI." NBER Working Paper.
-- Aghion, P., A. Bergeaud, T. Boppart, and J.-F. Brouillette. 2025. *Resetting the Innovation Clock: Endogenous Growth through Technological Turnover*.
-- Aghion, P., U. Akcigit, A. Bergeaud, R. Blundell, and D. Hemous. 2016. "Innovation and Top Income Inequality." *Journal of Political Economy* 124(5): 1473-1504.
 - Autor, D., C. Chin, A. Salomons, and B. Seegmiller. 2026. "What Makes New Work Different from More Work?" Forthcoming in *Annual Review of Economics*.
-- Autor, D., and N. Thompson. 2025. "Expertise." *Journal of the European Economic Association* 23(4): 1203-1271.
 - Autor, D., and B. Kausik. 2026. "Resolving the Automation Paradox: Falling Labor Share, Rising Wages."
-- Autor, D. 2024. "Does automation replace experts or augment expertise? The answer is yes." 2024 Schumpeter Lecture, European Economic Association.
 - Brynjolfsson, E., J. F. Li, J. Miranda, R. Seamans, and A. J. Wang. 2026. "Minimum Wages and Rise of the Robots." NBER Working Paper 34895.
-- Brynjolfsson, E., A. K. Agrawal, and A. Korinek. 2025. *The Economics of Transformative AI*. University of Chicago Press.
-- Brynjolfsson, E., A. K. Agrawal, and A. Korinek. 2025. "A Research Agenda for the Economics of Transformative AI." NBER Working Paper.
-- Brynjolfsson, E., K. McElheran, J. F. Li, Z. Kroff, E. Dinlersoz, L. Foster, and N. Zolas. 2024. "AI adoption in America: Who, what, and where." *Journal of Economics & Management Strategy*.
-- Brynjolfsson, E., and G. Unger. 2023. "The Macroeconomics of Artificial Intelligence." IMF.
-- Brynjolfsson, E., D. Li, and L. Raymond. 2023. "Generative AI at Work." *The Quarterly Journal of Economics*.
-- Brynjolfsson, E. 2022. "The Turing Trap: The Promise & Peril of Human-Like Artificial Intelligence." *Daedalus*.
-- Brynjolfsson, E., and A. McAfee. 2017. "The Business of Artificial Intelligence: What it Can and Cannot Do for Your Organization." *Harvard Business Review*.
-- McAfee, A., and E. Brynjolfsson. 2016. "Human Work in the Robotic Future: Policy for the Age of Automation." *Foreign Affairs*, July/August 2016.
-- Brynjolfsson, E., and A. McAfee. 2015. "Will Humans Go the Way of Horses? Labor in the Second Machine Age." *Foreign Affairs*, July/August 2015.
-- Brynjolfsson, E., A. McAfee, and M. Spence. 2014. "New World Order: Labor, Capital, and Ideas in the Power Law Economy." *Foreign Affairs*, July/August 2014.
+- Kulveit, J. 2026. "[Post-AGI Economics As If Nothing Ever Happens](https://www.lesswrong.com/posts/fL7g3fuMQLssbHd6Y/post-agi-economics-as-if-nothing-ever-happens#)." *LessWrong*, February 4, 2026.
