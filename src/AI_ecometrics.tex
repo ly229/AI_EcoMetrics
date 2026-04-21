@@ -17,10 +17,11 @@
 \setlength{\parskip}{0.5em}
 \setlength{\parindent}{0pt}
 \renewcommand{\baselinestretch}{1.08}
+\setcounter{secnumdepth}{0}
 
 \newcommand{\affmark}[1]{\raisebox{0.6ex}{#1}}
 
-\title{From Clerks to Agentic-AI:\\How will Technology Change Labor Market in Finance?}
+\title{From Clerks to Agentic AI: How Will Technology Transform the Labor Market in Finance?}
 \author{Lu Yu\affmark{1} and Xiang Li\affmark{2}}
 \date{}
 
@@ -54,246 +55,247 @@
 \maketitle
 
 \begin{abstract}
-Artificial intelligence is beginning to reshape financial markets in the same way that computers and electronic systems reshaped them in earlier decades. This paper studies a focused version of that broader shift: the rise of AI trading agents and their effect on market participants, market structure, and labor demand inside finance. The central claim is not that AI will eliminate finance, but that it will reorganize who can do high-quality research, monitoring, execution, and risk management. We use the historical computer revolution in the 1980s and 1990s as a benchmark, then compare it with the current AI wave. The expected outcome is a more polarized industry: large institutions preserve structural advantages, small teams become more capable, and middle-layer roles face the greatest pressure.
+Artificial intelligence is beginning to reshape financial markets in ways that echo earlier technological transitions in finance. This paper examines how task automation changes labor productivity and labor demand in U.S. financial firms across three technology waves: computerization, indexing, and agentic AI. Combining historical comparison with firm-level operating outcomes and filing-based automation measures, it argues that successive automation waves reorganize workflows, scale, and the distribution of capability across firms rather than simply eliminating jobs. The resulting pattern is likely to be a more polarized industry in which large institutions retain structural advantages, small teams become more capable, and middle-layer functions face the greatest pressure.
 \end{abstract}
 
-\section{The Question}
-The rapid diffusion of agentic AI has created a new question for finance: whether the technology will primarily substitute for labor, augment existing workers, or reorganize the allocation of tasks inside firms. The issue matters especially in financial services because the industry combines standardized workflows, information processing, client-facing service, and judgment-intensive decision-making within the same organizational structure. As a result, AI is likely to affect tasks unevenly. Some activities may become cheaper and faster, while others may remain bottlenecked by supervision, trust, interpretation, and responsibility. The central question is therefore not simply whether AI reduces headcount, but which parts of the firm adjust first and what that implies for productivity, scale, and labor demand.
+\section{I. How Does Agentic AI Impact Financial Markets?}
+Finance is an unusually informative setting for studying automation because it combines standardized workflows, information processing, client service, and judgment-intensive decision making within the same firms. New technology therefore affects tasks unevenly: some activities become cheaper and faster almost immediately, while others remain constrained by supervision, trust, interpretation, and accountability. The relevant question is not simply whether AI reduces headcount, but how automation changes the internal allocation of tasks and what that implies for productivity, scale, and labor demand.
 
-This paper approaches that question with a finance-specific empirical design that combines historical comparison, firm-level operating outcomes, and a simple measure of AI exposure drawn from corporate disclosures. Rather than treating AI as a purely speculative future shock, the paper studies how its diffusion already appears in the language firms use and whether that diffusion aligns with changes in revenue intensity, scale, and labor cost per worker. The goal is not to claim definitive causality at this stage, but to build a transparent framework for asking how AI reshapes the organization of work inside finance.
+The analysis links historical technological change to contemporary AI adoption. Rather than treating AI as a purely speculative future shock, it examines whether rising automation intensity in firm disclosures is associated with changes in revenue per employee, assets under management per employee, and labor expense per employee. The broader aim is to place agentic AI within a longer sequence of technological change in finance rather than to treat it as a complete break from the past.
 
-\section{Historical Parallel: The Computer Revolution}
-The natural benchmark for the AI wave is the earlier computer revolution. In the 1980s and 1990s, personal computers, spreadsheets, Bloomberg terminals, Reuters systems, and electronic trading infrastructure transformed the way financial firms processed information and managed risk. Those technologies did not eliminate finance. They changed who could operate effectively, how quickly information traveled through the system, and which firms could scale their edge.
+The contribution is threefold. First, the paper organizes the analysis around three economically meaningful waves: computerization, indexing, and AI-driven automation. Second, it constructs filing-based measures of automation intensity that map onto these waves. Third, it relates those measures to firm-level operating outcomes to assess whether finance becomes more scalable and productive before labor-cost adjustment becomes visible.
 
-That historical comparison matters because finance has already lived through one major technology shock. The earlier wave increased speed, improved information processing, expanded the use of derivatives, and widened the advantage of institutions that could afford hardware, data, and systems integration. Manual workflows such as paper tickets, phone-based execution, and fragmented recordkeeping gradually gave way to system-driven trading and more interconnected market structure. The current AI wave appears to be pushing on similar margins, but through cognition and workflow automation rather than through computation alone.
+The preliminary evidence is consistent with that view. Productivity rises across successive technology waves, labor-cost adjustment appears slower than output adjustment, and AI-era firms exhibit the strongest filing-based automation intensity. These patterns are descriptive associations, not causal estimates, but they provide a disciplined framework for studying how automation may reorganize labor in finance.
 
-The next figure translates that historical comparison into a task-level cost question. It shifts the discussion from old technology infrastructure to the practical choice between human labor, off-shore labor, and AI agents. The point is not that AI is always cheaper, but that the relevant unit of analysis is the full workflow cost, including supervision, risk, and integration.
+\section{II. Historical Lessons from the Computerization and Indexing Eras}
+The natural benchmark for the current AI wave is the earlier computer revolution in finance. In the 1980s and 1990s, personal computers, spreadsheets, Bloomberg terminals, Reuters systems, and electronic trading infrastructure transformed how financial firms processed information and managed risk. Those technologies did not eliminate finance; they changed who could operate effectively, how quickly information moved through the system, and which firms could scale their edge.
+
+The second major wave came with indexing and rules-based investing. Between roughly 2000 and 2015, ETFs, benchmark replication, passive allocation, and automated portfolio implementation reshaped large parts of asset management and market intermediation. This wave mattered not because it replaced all active judgment, but because it codified a large set of investment and rebalancing tasks that had previously been more labor intensive or discretionary.
+
+The third wave is the current AI and workflow-automation era, beginning around 2015 and accelerating sharply with generative and agentic systems. Unlike the earlier computerization wave, which mainly expanded computation and connectivity, the AI wave pushes further into cognition-adjacent tasks such as monitoring, summarization, drafting, triage, and workflow coordination. Unlike indexing, which standardized portfolio construction in a narrower domain, AI has the potential to affect a broader range of occupations inside financial firms.
+
+These eras are descriptive and interpretive rather than a stand-alone identification strategy. Their purpose is to provide a historically grounded framework for comparing how different forms of task automation alter productivity and labor demand over time.
+
+The task-level economic logic is illustrated by the following cost comparison, which shifts the discussion from infrastructure to the practical choice among domestic labor, offshore labor, and AI agents for repeatable workflows.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{workforce_transformation.png}
+  \includegraphics[width=\linewidth]{../analysis/AI_exposure_analysis/figures/workforce_transformation.png}
   \caption{Workforce transformation cost comparison}
 \end{figure}
 
-\section{Baseline Evidence from the Earlier Productivity Shift}
-The earlier \texttt{simple\_analysis} provides the descriptive bridge from the computer era to the current AI period. That work compares firm-group productivity across four broad eras: pre-computerization, computerization, indexing, and AI. The regression evidence shows that both \texttt{revenue\_per\_employee} and \texttt{aum\_per\_employee} are substantially higher in later eras than in the pre-computerization benchmark, even after controlling for firm-group fixed effects. In the revenue specification, the era coefficients rise from 1.4070 in the computerization period to 2.0543 in the indexing period and 2.3688 in the AI period. In the AUM specification, the coefficients rise from 1.3638 to 2.4197 and then 3.3944.
+\section{III. How Does Automation Raise Labor Productivity?}
+Automation can raise labor productivity through several channels: it can reduce routine manual work, lower coordination costs, accelerate workflow speed, and enable firms to operate at greater scale without proportionate increases in labor input. In finance, these effects may appear in back-office processing, reporting, risk monitoring, trade support, and parts of research production.
 
-These magnitudes are not causal estimates, but they show that the financial panel is already moving in the same broad direction as the later SEC-based analysis. They also suggest that long-run productivity growth in finance did not arrive all at once. It accumulated through waves of technological and organizational change.
+Automation, however, need not generate immediate labor displacement. Technology can change the composition of work well before it changes headcount. Firms may reassign workers toward supervision, exception handling, and client-facing tasks while software absorbs repetitive tasks in the background. Labor expense per employee may therefore respond more slowly than output-based measures of productivity.
+
+The core conceptual variable is \texttt{task\_automation\_intensity}, defined as the extent to which routine, codifiable, or repetitive work is shifted from human labor to software, rules, machines, or AI systems. The vocabulary changes across eras, but the economic concept remains stable: firms differ in how intensively they automate tasks previously performed by people.
+
+This framework yields three testable implications. First, productivity should rise more in later technology eras than in the pre-computerization benchmark. Second, higher task-automation intensity should be associated with higher output per worker or greater scale per worker. Third, labor expense per worker may move more slowly than output measures if automation primarily works through reorganization and augmentation rather than immediate labor shedding.
+
+\section{IV. How Do We Define Productivity and Automation Intensity?}
+\subsection{A. Who Do We Study?}
+The empirical setting is a panel of publicly listed U.S. financial firms observed in filing and accounting data. The broader design targets a sample of roughly 100 firms, with a possible extension to 300 firms for robustness or appendix analysis. In the current draft, the AI-specific filing analysis uses a focused sample of five large institutions: Bank of America, BNY Mellon, JPMorgan Chase, S\&P Global, and State Street.
+
+Firm-years are assigned to the three broad technology eras using calendar-year cutoffs: \texttt{Computerization} (\texttt{1985-2000}), \texttt{Index investing} (\texttt{2000-2015}), and \texttt{AI / automation} (\texttt{2015-present}). These cutoffs are stylized, but they provide a transparent way to compare broad phases of technological change in finance.
+
+\subsection{B. What Is the Productivity Measure?}
+The main productivity outcome is revenue per employee, which captures broad operating productivity and is available across a wide set of firms. Secondary outcomes include labor expense per employee and, where relevant, assets under management per employee. The AUM-based measure is especially informative for asset managers, custodians, and related firms in which scale can expand without a proportional increase in headcount.
+
+Together, these outcomes distinguish different channels through which automation may matter. Revenue per employee captures overall operating productivity. AUM per employee captures scale in information-processing and oversight-intensive businesses. Labor expense per employee provides a direct, though incomplete, proxy for whether organizational automation is translating into near-term labor-cost compression.
+
+\subsection{C. How Is Task Automation Intensity Measured Across Eras?}
+The era-specific automation measures are built from annual reports and 10-K filings. For the computerization era, the relevant language includes terms related to computers, terminals, spreadsheets, electronic trading, digitization, workflow systems, and back-office automation. For the indexing era, the relevant vocabulary includes index funds, ETFs, passive management, benchmark replication, systematic rebalancing, and rules-based allocation. For the AI era, the measure includes terms such as artificial intelligence, machine learning, generative AI, autonomous agents, robotic process automation, workflow automation, and large language models.
+
+In the current AI-focused panel, the exposure measure counts direct AI language such as ``artificial intelligence,'' ``machine learning,'' ``generative AI,'' and ``autonomous agent,'' together with adjacent automation language such as ``automation,'' ``robotic process automation,'' and ``workflow automation.'' Direct AI terms receive higher weight, and the weighted count is normalized by total filing words to form the final \texttt{ai\_exposure} variable.
+
+More generally, each era-specific score is normalized by filing length, and the scores can be standardized within sample for comparability. If useful for the broader paper, the three measures can also be combined into one composite \texttt{task\_automation\_intensity} index.
+
+\section{V. Our Empirical Framework}
+The empirical design begins with descriptive comparisons across eras and then moves to a fixed-effects panel specification. The goal is not to claim clean causal identification, but to test whether within-firm increases in automation intensity align with systematic changes in productivity and labor-cost outcomes.
+
+The baseline AI-era specification is:
+
+\begin{equation}
+\log(1 + \text{outcome}_{it}) = \beta \cdot \text{ai\_exposure}_{it} + \text{firm FE} + \text{year FE} + \text{error}_{it}.
+\end{equation}
+
+This design absorbs time-invariant firm characteristics and common macro shocks. It is therefore appropriate for descriptive within-firm comparisons, but it does not support strong causal interpretation. In the broader three-era framework, analogous specifications can regress productivity outcomes on era indicators, automation-intensity measures, and their interactions.
+
+The framework also allows for heterogeneity analysis. For example, one can compare asset managers with banks, passive-heavy firms with active-heavy firms, and large institutions with mid-sized firms. These comparisons are important because automation may affect scale, coordination, and labor demand differently across business models.
+
+\section{VI. How Does Automation Shape Productivity?}
+\subsection{A. Productivity Trends Across Eras}
+The earlier \texttt{simple\_analysis} provides the descriptive bridge from the computer era to the current AI period. It compares firm-group productivity across four broad eras: pre-computerization, computerization, indexing, and AI. The regression evidence shows that both \texttt{revenue\_per\_employee} and \texttt{aum\_per\_employee} are substantially higher in later eras than in the pre-computerization benchmark, even after controlling for firm-group fixed effects. In the revenue specification, the era coefficients rise from 1.4070 in the computerization period to 2.0543 in the indexing period and 2.3688 in the AI period. In the AUM specification, the coefficients rise from 1.3638 to 2.4197 and then 3.3944.
+
+These coefficients should be interpreted as descriptive rather than causal. They nonetheless indicate that the financial panel moves in the same broad direction as the later SEC-based analysis and suggest that productivity growth in finance accumulated through successive waves of technological and organizational change rather than arriving all at once.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{simple_finance_productivity_eras_real.png}
+  \includegraphics[width=\linewidth]{../analysis/simple_analysis/figures/simple_finance_productivity_eras_real.png}
   \caption{Simple finance productivity eras real}
 \end{figure}
 
-The real-era figure reinforces the same point after deflating the productivity ratios. The rise remains visible in real terms, so the pattern is not just an artifact of nominal growth. It is the cleanest descriptive bridge from the historical panel to the filing-based AI analysis.
+The real-era figure reinforces this pattern after deflating the productivity ratios, indicating that the increase is not simply an artifact of nominal growth.
+
+\subsection{B. Automation and Productivity}
+The AI-focused filing analysis examines whether firms with rising AI disclosure intensity also exhibit systematic changes in operating outcomes. The fixed-effects estimates indicate a mixed but informative pattern. The coefficient on AI exposure is negative for \texttt{revenue\_per\_employee}, at \texttt{-0.0535} with a robust standard error of \texttt{0.0117}, and positive for \texttt{aum\_per\_employee}, at \texttt{0.5843} with a robust standard error of \texttt{0.1646}.
+
+These coefficients should be interpreted as descriptive associations rather than causal effects. Substantively, greater AI disclosure intensity is associated with lower revenue intensity per worker but higher AUM per worker. In a financial setting, that combination is more consistent with reorganization, reinvestment, and output-mix change than with a single-margin productivity story. The coefficient plot below summarizes the firm- and year-fixed-effects estimates across outcomes.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{wage_trends_by_group_real.png}
+  \includegraphics[width=\linewidth]{../analysis/AI_exposure_analysis/figures/ai_exposure_fe_coefficients.png}
+  \caption{Coefficient plot of AI exposure fixed-effects results}
+\end{figure}
+
+\subsection{C. Labor Cost Response}
+The coefficient on \texttt{labor\_expense\_per\_employee} is small and statistically indistinguishable from zero, at \texttt{0.0107} with a robust standard error of \texttt{0.0219}. This pattern suggests that firms do not respond to rising automation intensity through immediate, visible labor-cost compression. Instead, AI may initially affect scale, task allocation, and the organization of work before those changes appear in compensation or headcount measures.
+
+The wage-trend evidence from the earlier panel is consistent with that interpretation. Labor costs evolve over time, but not in lockstep with output-per-worker measures, as would be expected if automation primarily operates through augmentation, workflow consolidation, and task reallocation.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{../analysis/simple_analysis/figures/wage_trends_by_group_real.png}
   \caption{Wage trends by group real}
 \end{figure}
 
-The wage-trend figure adds the labor-market dimension. Labor costs also evolve over time, and wage growth is not identical across firm families. That matters because the central question is not only whether output per worker rises, but whether finance changes through labor displacement, labor augmentation, or internal task reallocation.
+\subsection{D. Heterogeneity}
+The event-study style figure suggests that adoption is staggered across firms rather than synchronized at the industry level. Bank of America appears earlier, S\&P Global accelerates later, JPMorgan and State Street move more gradually, and BNY Mellon crosses the threshold very late in the sample. This timing pattern points to heterogeneous organizational adoption rather than a single sector-wide break. The figure aligns each firm's exposure series around its first substantive increase in disclosure intensity.
 
-\section{AI Competition: From Exposure to Reorganization}
-To examine the current AI wave more directly, the paper builds a firm-level AI exposure measure from official SEC 10-K filings for five large financial firms: Bank of America, BNY Mellon, JPMorgan Chase, S\&P Global, and State Street. The corpus covers 2015 through 2025 and is fetched directly from SEC-hosted endpoints using a valid User-Agent header. The exposure measure counts direct AI language such as ``artificial intelligence,'' ``machine learning,'' ``generative AI,'' and ``autonomous agent,'' together with adjacent automation language such as ``automation,'' ``robotic process automation,'' and ``workflow automation.'' Direct AI terms receive higher weight, and the weighted count is normalized by total filing words to form the final \texttt{ai\_exposure} variable.
-
-The panel outcomes are \texttt{revenue\_per\_employee}, \texttt{aum\_per\_employee}, and \texttt{labor\_expense\_per\_employee}. These variables are useful because they separate different channels through which AI may matter. Revenue per employee captures broad operating productivity. AUM per employee captures scale in asset-management and custody-type activity. Labor expense per employee provides a direct though incomplete proxy for labor cost pressure. The baseline specification is
-
-\begin{equation}
-\log(1 + \text{outcome}_{it}) = \beta \cdot \text{ai\_exposure}_{it}
-+ \text{firm FE} + \text{year FE} + \text{error}_{it}.
-\label{eq:baseline}
-\end{equation}
-
-This is a panel correlation design rather than a causal design. It estimates within-firm variation over time while absorbing common macro shocks. Its role is to test whether firms with rising AI disclosure intensity also display systematic changes in operating outcomes.
-
-\section{Democratization of Financial Capability}
-One implication of agentic AI is that some capabilities once reserved for large institutions are becoming cheaper and more modular. In earlier decades, access to premium terminals, specialized analysts, and bespoke internal systems created a substantial barrier between large firms and everyone else. Today, AI tools increasingly compress the cost of research assistance, market monitoring, documentation, and routine analytical tasks.
-
-This does not mean the institutional advantage disappears. It means the composition of the advantage changes. Large firms still dominate in infrastructure, proprietary data, compliance depth, and execution quality. But AI lowers the cost of assembling a competent research and operations stack, which makes small teams more viable than they were under the older technology regime. In labor-market terms, that raises pressure on middle-layer functions whose edge depended on coordinating information flows that AI can now help standardize.
-
-\section{The Rise of Mini Hedge Funds}
-This logic points to a possible new firm form: very small teams operating with hedge-fund-like capability. A one- to three-person team equipped with AI can plausibly perform research triage, monitor multiple markets, summarize disclosures, draft memos, compare scenarios, and maintain higher operational coverage than a similarly sized team could in the past. The technology therefore does not only affect incumbent banks and asset managers. It also changes the minimum efficient scale for certain types of financial analysis and portfolio support.
-
-The filing evidence is consistent with that broader interpretation. If AI exposure is associated with higher AUM per employee but not with immediate reductions in labor expense per employee, the more plausible story is not simply ``firms fire people.'' It is that AI allows more scale and workflow consolidation per worker, especially in businesses where monitoring and information processing matter.
-
-\section{Impact on Institutions}
-The fixed-effects results summarize that pattern clearly. The estimated coefficient on AI exposure is negative for \texttt{revenue\_per\_employee}, with a point estimate of -0.0535 and a robust standard error of 0.0117. The coefficient on \texttt{aum\_per\_employee} is positive, with a point estimate of 0.5843 and a robust standard error of 0.1646. The coefficient on \texttt{labor\_expense\_per\_employee} is small and statistically insignificant, at 0.0107 with a robust standard error of 0.0219.
+This heterogeneity is economically important. Large institutions retain advantages in infrastructure, proprietary data, compliance depth, and execution quality. By contrast, firms whose historical edge depended on labor-heavy coordination may face greater pressure if AI lowers the cost of standardizing information flows and support functions. Extending the analysis to compare banks with asset managers, passive-heavy with active-heavy firms, and large with mid-sized institutions is therefore a natural next step.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{ai_exposure_fe_coefficients.png}
-  \caption{Coefficient plot of AI exposure fixed-effects results}
-  \label{fig:coeff}
-\end{figure}
-
-These estimates should not be read as causal proof. But they are informative because they separate different margins of adjustment. Greater AI disclosure intensity is associated with lower revenue intensity per worker, higher AUM per worker, and no clear immediate compression in labor expense per worker. In a finance setting, that combination is more consistent with reorganization, reinvestment, and output-mix change than with a clean headcount-reduction story.
-
-This pattern also helps explain why middle-tier firms may face the most pressure. Large institutions retain advantages in infrastructure, execution, and proprietary data. Small teams gain capability through AI. The firms most exposed are those whose historical edge depended on labor-heavy coordination without the scale benefits of the largest incumbents.
-
-\section{Workforce Transformation}
-AGI labor impacts are hard to model directly, so the most practical starting point is bottom-line thinking. The relevant comparison is not whether AI is ``cheap'' in the abstract, but whether the fully loaded cost of a human's output exceeds the all-in cost of AI tokens, infrastructure, and oversight. This framing also fits Kulveit's discussion of post-AGI economics, which warns against importing human-economy assumptions too directly into an AI-dominated setting \citep{kulveit2026postagi}.
-
-The table below makes that comparison concrete. AI is not costless, but its cost structure is different: more variable on usage, less tied to headcount, and often easier to scale across repetitive work. The key question is whether a task is dominated by judgment and exception handling, or by volume, standardization, and throughput.
-
-\begin{table}[H]
-  \centering
-  \small
-  \setlength{\tabcolsep}{4pt}
-  \renewcommand{\arraystretch}{1.12}
-  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth} >{\raggedright\arraybackslash}p{0.22\linewidth} >{\raggedright\arraybackslash}p{0.22\linewidth} >{\raggedright\arraybackslash}p{0.22\linewidth}@{}}
-    \toprule
-    \textbf{Cost component} & \textbf{U.S. Worker} & \textbf{Off-Shore Worker} & \textbf{AI Agent} \\
-    \midrule
-    Direct & Salary: \$45k/year & Salary: \$8k/year & Token: \$0.03 per call \\
-    Indirect & Benefits, Admin: +35\% (\$15k) & Benefits, Admin: +35\% (\$3k) & Integration, infra: \$10k/year \\
-    Supervision & Manager: 10--15 hours monthly & Manager: 15--20 hours monthly & Prompt, monitoring: 5--10 hours/month \\
-    Risk & Turnover (50\% annual), errors, absenteeism & Turnover (60--80\%), timezone issues & Hallucinations, escalation handoff (20--30\%) \\
-    \textbf{Per-call cost} & \textbf{\$4.80/call} & \textbf{\$0.88/call} & \textbf{\$0.83/call} \\
-    \textbf{\shortstack{Annual\\(12.5k calls)}} & \textbf{\$60,000} & \textbf{\$11,000} & \textbf{\$10,375} \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-The labor-market implication is that AI will likely reshape finance through tasks before it reshapes it through job titles. Functions that are highly codifiable, such as data processing, routine reporting, standardized review, first-pass compliance checks, and internal documentation, are the most likely to face cost compression. By contrast, judgment-heavy work, client trust, negotiation, model oversight, and regime interpretation are more likely to be augmented than replaced.
-
-The event-study style figure supports this incremental view of diffusion. It aligns firms around the first year in which exposure rises above the early baseline by a fixed margin. Bank of America appears earlier, S\&P Global accelerates later, JPMorgan and State Street move more gradually, and BNY Mellon crosses the threshold very late in the sample. That timing pattern suggests staggered organizational adoption rather than a single sector-wide break.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\linewidth]{ai_exposure_event_study.png}
+  \includegraphics[width=\linewidth]{../analysis/AI_exposure_analysis/figures/ai_exposure_event_study.png}
   \caption{Event-study style AI exposure dynamics}
-  \label{fig:event}
 \end{figure}
 
-The broader implication is that AI in finance should not be treated as a binary adoption event. It behaves more like rising organizational intensity. Firms disclose it differently, adopt it at different speeds, and likely apply it to different task bundles. That is exactly why future work should focus on timing, heterogeneity by business line, and task-specific exposure rather than on a single headline measure of automation.
+\section{VII. Transformation for the Financial Labor Market}
+Taken together, the evidence points to transformation rather than simple replacement. Productivity gains appear before labor-cost reductions, suggesting that automation in finance initially operates by changing how work is organized rather than by immediately eliminating jobs. Firms can use technology to expand monitoring capacity, standardize routine workflows, and scale output per worker while still relying on human labor for oversight, interpretation, client trust, and strategic judgment.
 
-\section{Who Will Not Be Replaced?}
-The evidence here is consistent with the task-based literature on technology and labor. Autor's framework emphasizes that technology substitutes for routine tasks while complementing abstract and interpersonal ones \citep{autor2025expertise,autor2026newwork}. Acemoglu and Restrepo show that automation, augmentation, capital deepening, and task creation are distinct channels \citep{acemoglu2025tasksatwork,acemoglu2022tasksautomation}. Brynjolfsson and McAfee stress that organizational redesign matters as much as the technology itself \citep{brynjolfsson2023generative,brynjolfssonmcafee2017businessai}. The present results fit that logic. AI exposure appears to align with changes in scale and workflow, but not with a simple, immediate reduction in labor expense per employee.
+This logic also helps explain why indexing and AI both matter, but in different ways. Indexing codified and standardized a narrower set of portfolio and execution tasks, especially in asset management. AI reaches more deeply into cross-functional workflows such as monitoring, reporting, drafting, triage, and coordination. The implication is that AI can affect a broader set of occupations even if the immediate accounting response looks gradual.
 
-That suggests the workers least likely to be displaced are not simply the most senior by title, but the ones who contribute judgment under uncertainty, build frameworks, supervise models, interpret structural breaks, and integrate information across domains. Finance has many routine components, but it also has many situations in which codified prediction is not enough. Black swan events, regime shifts, political shocks, and strategic interaction still require human oversight. AI can improve throughput and pattern recognition, but it does not eliminate the need for decision rights.
+One likely outcome is a more polarized industry. Large institutions preserve structural advantages in data, infrastructure, and compliance. Small teams become more capable because AI compresses the cost of research support, market monitoring, and operational coverage. The middle layer faces the greatest pressure because its historical value often came from coordinating information flows that increasingly can be standardized or partially automated.
 
-\section{A Bifurcated Future}
-Taken together, the evidence points toward a more polarized financial industry. Large institutions retain structural advantages. Very small teams become more capable because AI compresses the cost of coordination and analysis. The middle layer faces the greatest pressure because its historical role was often to intermediate between raw information and structured workflow. As AI becomes better at that layer of work, the competitive map shifts.
+This interpretation is consistent with the broader automation literature. Autor's task-based framework emphasizes that technology substitutes for routine tasks while complementing abstract and interpersonal ones. Acemoglu and Restrepo distinguish automation, augmentation, capital deepening, and task creation as separate channels. Brynjolfsson and McAfee emphasize that organizational redesign matters as much as the technology itself. The results here fit that logic: automation in finance appears to align more clearly with reorganization of scale and workflow than with an immediate decline in labor expense per employee.
 
-This is why the paper frames AI less as a story of total replacement and more as a story of redistribution of capability. The central adjustment margin may be organizational redesign rather than immediate labor shedding. Firms may first change the scale of work per employee, the mix of tasks, and the internal allocation of responsibility. Only later, if at all, do those changes show up clearly in headcount or compensation ratios.
+\section{VIII. What Are the Study's Limitations?}
+This analysis remains exploratory and has several limitations. First, the filing-based exposure measure captures disclosure intensity as well as underlying operational adoption. Firms may differ in how much they discuss AI even when actual implementation differs less. Second, the current AI-focused sample includes only five firms, so the results should be viewed as a structured pilot rather than a definitive sector-wide estimate.
 
-\section{Final Perspective: Efficiency, Risk, and Limits}
-The present analysis remains exploratory and has clear limitations. The sample includes only five firms. The exposure measure is based on filing language, which captures disclosure intensity as well as underlying operational adoption. The fixed-effects design cannot separate causality from reverse causality or omitted organizational change. For those reasons, the results should be interpreted as descriptive evidence rather than definitive estimates of the labor-market effect of AI in finance.
+Third, the fixed-effects design is descriptive and cannot cleanly separate causality from reverse causality or omitted organizational change. Productivity ratios are also influenced by business mix, firm strategy, and market conditions. Finally, the three-era classification is stylized. It is useful as a historical framework, but it should not be interpreted as a sharp causal partition of technological change.
 
-Still, the findings are useful because they sharpen the question. They suggest that the first-order effect of AI in finance may be reorganization of tasks, scaling of monitoring capacity, and uneven diffusion across firms, rather than an immediate collapse in labor costs. The next step is to expand the sample, strengthen the event-study design, and introduce heterogeneity by function, job type, and business line.
+\section{IX. Conclusion}
+This paper develops a framework for studying how agentic AI changes the labor market in finance by embedding the current AI wave within a longer history of computerization and indexing. Its main contribution is a transparent automation-intensity approach built from annual filings and linked to firm-level operating outcomes. Across the three-era perspective, finance appears to become more scalable and more productive over time, but labor adjustment remains uneven and gradual.
 
-\section{Conclusion}
-This paper provides an initial working framework for studying how agentic AI changes the labor market in finance using official SEC filing data. The main contribution is a transparent AI exposure proxy built from 10-K text and a simple panel analysis that relates the proxy to firm-level outcomes. The empirical evidence suggests that higher AI exposure is associated with lower revenue per employee, higher AUM per employee, and no clear immediate change in labor expense per employee. The event-study style evidence further suggests that AI diffusion is staggered and organizationally mediated. The broader implication is that finance is unlikely to be ``eliminated'' by AI, but it is likely to be reorganized around new combinations of scale, supervision, and judgment.
+The current AI evidence indicates that higher AI exposure is associated with greater AUM per employee, weaker revenue-per-employee performance, and no clear immediate change in labor expense per employee. The event-study evidence likewise suggests that adoption is staggered and organizationally mediated. More broadly, the results suggest that technology is likely to transform the labor market in finance through task reallocation, workflow redesign, and uneven gains in capability rather than through uniform labor replacement.
 
 \begin{thebibliography}{99}
-
-\bibitem{brynjolfssonmcafee2014newworldorder}
-Brynjolfsson, E., A. McAfee, and M. Spence. 2014.
-\newblock ``New World Order: Labor, Capital, and Ideas in the Power Law Economy.''
-\newblock \emph{Foreign Affairs}, July/August 2014.
-
-\bibitem{brynjolfssonmcafee2015horses}
-Brynjolfsson, E., and A. McAfee. 2015.
-\newblock ``Will Humans Go the Way of Horses? Labor in the Second Machine Age.''
-\newblock \emph{Foreign Affairs}, July/August 2015.
-
-\bibitem{aghion2016innovation}
-Aghion, P., U. Akcigit, A. Bergeaud, R. Blundell, and D. H\'emous. 2016.
-\newblock ``Innovation and Top Income Inequality.''
-\newblock \emph{Journal of Political Economy} 124(5): 1473--1504.
-
-\bibitem{mcafeebrynjolfsson2016humanwork}
-McAfee, A., and E. Brynjolfsson. 2016.
-\newblock ``Human Work in the Robotic Future: Policy for the Age of Automation.''
-\newblock \emph{Foreign Affairs}, July/August 2016.
-
-\bibitem{brynjolfssonmcafee2017businessai}
-Brynjolfsson, E., and A. McAfee. 2017.
-\newblock ``The Business of Artificial Intelligence: What it Can and Cannot Do for Your Organization.''
-\newblock \emph{Harvard Business Review}.
-
-\bibitem{brynjolfsson2022turingtrap}
-Brynjolfsson, E. 2022.
-\newblock ``The Turing Trap: The Promise \& Peril of Human-Like Artificial Intelligence.''
-\newblock \emph{D\ae dalus}.
-
-\bibitem{brynjolfsson2023macroeconomics}
-Brynjolfsson, E., and G. Unger. 2023.
-\newblock ``The Macroeconomics of Artificial Intelligence.''
-\newblock IMF.
-
-\bibitem{brynjolfsson2023generative}
-Brynjolfsson, E., D. Li, and L. Raymond. 2023.
-\newblock ``Generative AI at Work.''
-\newblock \emph{The Quarterly Journal of Economics}.
-
-\bibitem{brynjolfsson2024adoption}
-Brynjolfsson, E., K. McElheran, J. F. Li, Z. Kroff, E. Dinlersoz, L. Foster, and N. Zolas. 2024.
-\newblock ``AI adoption in America: Who, what, and where.''
-\newblock \emph{Journal of Economics \& Management Strategy}.
-
-\bibitem{autor2024schumpeter}
-Autor, D. 2024.
-\newblock ``Does automation replace experts or augment expertise? The answer is yes.''
-\newblock 2024 Schumpeter Lecture, European Economic Association.
 
 \bibitem{acemoglu2022tasksautomation}
 Acemoglu, D., and P. Restrepo. 2022.
 \newblock ``Tasks, Automation, and the Rise in U.S. Wage Inequality.''
-
-\bibitem{aghion2025resetting}
-Aghion, P., A. Bergeaud, T. Boppart, and J.-F. Brouillette. 2025.
-\newblock \emph{Resetting the Innovation Clock: Endogenous Growth through Technological Turnover}.
+\newblock Working paper.
 
 \bibitem{acemoglu2025tasksatwork}
 Acemoglu, D., F. Kong, and P. Restrepo. 2025.
 \newblock ``Tasks at Work: Comparative Advantage, Technology and Labor Demand.''
 \newblock \emph{Handbook of Labor Economics} 6: 1--114.
 
-\bibitem{agrawal2025economics}
-Agrawal, A. K., E. Brynjolfsson, and A. Korinek. 2025.
-\newblock \emph{The Economics of Transformative AI}.
-\newblock University of Chicago Press.
+\bibitem{acemoglu2026aiaggregation}
+Acemoglu, D., T. Lin, A. Ozdaglar, and J. Siderius. 2026.
+\newblock ``How AI Aggregation Affects Knowledge.''
+\newblock Working paper.
 
-\bibitem{agrawal2025agenda}
-Agrawal, A. K., E. Brynjolfsson, and A. Korinek. 2025.
-\newblock ``A Research Agenda for the Economics of Transformative AI.''
-\newblock NBER Working Paper.
-
-\bibitem{autor2025expertise}
-Autor, D., and N. Thompson. 2025.
-\newblock ``Expertise.''
-\newblock \emph{Journal of the European Economic Association} 23(4): 1203--1271.
+\bibitem{acemoglu2026aicognition}
+Acemoglu, D., D. Kong, and A. Ozdaglar. 2026.
+\newblock ``AI, Human Cognition and Knowledge Collapse.''
+\newblock Working paper.
 
 \bibitem{acemoglu2026automationpolarization}
 Acemoglu, D., and J. Loebbing. 2026.
 \newblock ``Automation and Polarization.''
 \newblock \emph{Journal of Political Economy} 134(3): 1017--1072.
 
-\bibitem{acemoglu2026aiaggregation}
-Acemoglu, D., T. Lin, A. Ozdaglar, and J. Siderius. 2026.
-\newblock ``How AI Aggregation Affects Knowledge.''
-
-\bibitem{acemoglu2026aicognition}
-Acemoglu, D., D. Kong, and A. Ozdaglar. 2026.
-\newblock ``AI, Human Cognition and Knowledge Collapse.''
-
 \bibitem{acemoglu2026proworker}
 Acemoglu, D., D. Autor, and S. Johnson. 2026.
 \newblock ``Building Pro-Worker Artificial Intelligence.''
 \newblock Brookings Institution.
+
+\bibitem{aghion2016innovation}
+Aghion, P., U. Akcigit, A. Bergeaud, R. Blundell, and D. H\'emous. 2016.
+\newblock ``Innovation and Top Income Inequality.''
+\newblock \emph{Journal of Political Economy} 124(5): 1473--1504.
+
+\bibitem{aghion2025resetting}
+Aghion, P., A. Bergeaud, T. Boppart, and J.-F. Brouillette. 2025.
+\newblock \emph{Resetting the Innovation Clock: Endogenous Growth through Technological Turnover}.
+\newblock Book manuscript.
+
+\bibitem{agrawal2025agenda}
+Agrawal, A. K., E. Brynjolfsson, and A. Korinek. 2025.
+\newblock ``A Research Agenda for the Economics of Transformative AI.''
+\newblock NBER Working Paper.
+
+\bibitem{agrawal2025economics}
+Agrawal, A. K., E. Brynjolfsson, and A. Korinek. 2025.
+\newblock \emph{The Economics of Transformative AI}.
+\newblock Chicago: University of Chicago Press.
+
+\bibitem{autor2024schumpeter}
+Autor, D. 2024.
+\newblock ``Does Automation Replace Experts or Augment Expertise? The Answer Is Yes.''
+\newblock Schumpeter Lecture, European Economic Association.
+
+\bibitem{autor2025expertise}
+Autor, D., and N. Thompson. 2025.
+\newblock ``Expertise.''
+\newblock \emph{Journal of the European Economic Association} 23(4): 1203--1271.
+
+\bibitem{autor2026automationparadox}
+Autor, D., and B. Kausik. 2026.
+\newblock ``Resolving the Automation Paradox: Falling Labor Share, Rising Wages.''
+\newblock Working paper.
 
 \bibitem{autor2026newwork}
 Autor, D., C. Chin, A. Salomons, and B. Seegmiller. 2026.
 \newblock ``What Makes New Work Different from More Work?''
 \newblock Forthcoming in \emph{Annual Review of Economics}.
 
-\bibitem{autor2026automationparadox}
-Autor, D., and B. Kausik. 2026.
-\newblock ``Resolving the Automation Paradox: Falling Labor Share, Rising Wages.''
+\bibitem{brynjolfsson2022turingtrap}
+Brynjolfsson, E. 2022.
+\newblock ``The Turing Trap: The Promise and Peril of Human-Like Artificial Intelligence.''
+\newblock \emph{Daedalus}.
+
+\bibitem{brynjolfsson2023generative}
+Brynjolfsson, E., D. Li, and L. Raymond. 2023.
+\newblock ``Generative AI at Work.''
+\newblock \emph{Quarterly Journal of Economics}.
+
+\bibitem{brynjolfsson2023macroeconomics}
+Brynjolfsson, E., and G. Unger. 2023.
+\newblock ``The Macroeconomics of Artificial Intelligence.''
+\newblock IMF working paper.
+
+\bibitem{brynjolfsson2024adoption}
+Brynjolfsson, E., K. McElheran, J. F. Li, Z. Kroff, E. Dinlersoz, L. Foster, and N. Zolas. 2024.
+\newblock ``AI Adoption in America: Who, What, and Where.''
+\newblock \emph{Journal of Economics \& Management Strategy}.
+
+\bibitem{brynjolfssonmcafee2014newworldorder}
+Brynjolfsson, E., A. McAfee, and M. Spence. 2014.
+\newblock ``New World Order: Labor, Capital, and Ideas in the Power Law Economy.''
+\newblock \emph{Foreign Affairs}, July/August.
+
+\bibitem{brynjolfssonmcafee2015horses}
+Brynjolfsson, E., and A. McAfee. 2015.
+\newblock ``Will Humans Go the Way of Horses? Labor in the Second Machine Age.''
+\newblock \emph{Foreign Affairs}, July/August.
+
+\bibitem{brynjolfssonmcafee2017businessai}
+Brynjolfsson, E., and A. McAfee. 2017.
+\newblock ``The Business of Artificial Intelligence: What It Can and Cannot Do for Your Organization.''
+\newblock \emph{Harvard Business Review}.
 
 \bibitem{brynjolfsson2026minimumwages}
 Brynjolfsson, E., J. F. Li, J. Miranda, R. Seamans, and A. J. Wang. 2026.
@@ -305,6 +307,11 @@ Kulveit, J. 2026.
 \newblock ``Post-AGI Economics As If Nothing Ever Happens.''
 \newblock \emph{LessWrong}, February 4, 2026.
 \newblock \url{https://www.lesswrong.com/posts/fL7g3fuMQLssbHd6Y/post-agi-economics-as-if-nothing-ever-happens\#}
+
+\bibitem{mcafeebrynjolfsson2016humanwork}
+McAfee, A., and E. Brynjolfsson. 2016.
+\newblock ``Human Work in the Robotic Future: Policy for the Age of Automation.''
+\newblock \emph{Foreign Affairs}, July/August.
 
 \end{thebibliography}
 

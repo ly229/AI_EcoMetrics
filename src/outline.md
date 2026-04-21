@@ -1,4 +1,4 @@
-# Task Automation and Labor Productivity in U.S. Financial Firms: Evidence from Three Technology Waves
+# From Clerks to Agentic AI: How Will Technology Transform the Labor Market in Finance?
 
 ## I. How Does Agentic AI Impact Financial Markets Through Automation?
 - Motivation: finance has gone through distinct technology waves that changed how work is organized.
@@ -101,7 +101,7 @@
   - passive-heavy vs active-heavy firms
   - large vs mid-sized firms
 
-## VII. Implications for the Financial Labor Market
+## VII. Transformation for the Financial Labor Market
 - What the results imply about the role of technology in finance.
 - Why productivity gains may show up before labor-cost reductions.
 - Why indexing and AI may both matter, but in different ways.
