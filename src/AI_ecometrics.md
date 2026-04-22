@@ -1,4 +1,5 @@
-# From Clerks to Agentic AI: How Will Technology Transform the Labor Market in Finance?
+# From Clerks to Agentic AI: 
+# How Will Technology Transform the Labor Market in Finance?
 
 **Lu Yu**  
 Department of Economics, Georgetown University
