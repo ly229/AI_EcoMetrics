@@ -7,3 +7,5 @@ Data/
 data/
 paper_writing/pro_worker_ai_contents.md
 src/economist/**/*.pdf
+assets/*
+memory/*
