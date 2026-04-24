@@ -44,6 +44,10 @@ The project uses reusable skills for data collection:
 
 These skills support the panel and text-based exposure workflows used to measure productivity, labor intensity, and how much AI- and automation-related language appears in annual reports and 10-K filings.
 
+## AI Automation Score
+
+[src/AI_Intelligence_Index](src/AI_Intelligence_Index/) documents the Artificial Analysis Intelligence Index methodology and treats it as an AI automation score: a model-level proxy for the frontier automation capability available to finance workflows over time.
+
 ## AI Exposure Analysis
 
 The SEC filing pipeline and the resulting panel fixed-effects analysis now live in [AI_exposure_analysis](AI_exposure_analysis/).
