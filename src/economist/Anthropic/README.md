@@ -24,6 +24,7 @@ This directory currently stores the labor-market-impact subset:
 
 | File | Description |
 | --- | --- |
+| `march-2026-report.md` | Source-linked markdown brief for Anthropic's March 24, 2026 Economic Index report on learning curves, model selection, use-case diversification, geography, and API migration. |
 | `job_exposure.csv` | Occupation-level observed exposure scores keyed by O*NET-SOC occupation code and title. |
 | `task_penetration.csv` | Task-level penetration scores showing whether specific O*NET tasks have observed Claude usage. |
 
