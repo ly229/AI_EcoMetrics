@@ -1,0 +1,1 @@
+#“Agentic AI” in biology doesn’t mean autonomous AI doing science. It means: decompose a biological question into steps, pick the right tools, run them, check the output. The biologist decides what to ask. The AI handles the wiring.
